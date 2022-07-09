@@ -1,5 +1,5 @@
 to setup-results-file
-  file-open "PABMI_simulation_results.txt"
+  file-open "results.txt"
   file-type "      "
   file-print Inspection-Strategy 
   file-type "      "
@@ -11,7 +11,7 @@ to setup-results-file
 end
 
 to output-results
-  file-open "PABMI_simulation_results.txt"
+  file-open "results.txt"
   file-type "      "
   file-type ticks
   file-type "      "
