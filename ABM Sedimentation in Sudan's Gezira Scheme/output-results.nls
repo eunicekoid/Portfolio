@@ -1,5 +1,5 @@
 to setup-results-file
-  file-open "results_v16.1.0_2022.05.17.txt"
+  file-open "results.txt"
   file-type "      "
   file-print Maintenance-Scenario
   file-type "      "
@@ -9,7 +9,7 @@ to setup-results-file
 end
 
 to output-results
-  file-open "results_v16.1.0_2022.05.17.txt"
+  file-open "results.txt"
   file-type "      "
   file-type ticks mod 365
   file-type "      "
