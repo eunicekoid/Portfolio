@@ -1,4 +1,4 @@
-to act-according-to-enforcement  ;; This is not based on data - not phenomenological. There's no indication in the data on how inspectees react to enforcement. 
+to act-according-to-enforcement  
   ask inspection-candidates with [compliance != "compliant"] [
     ifelse absorbance-capacity >= enforcement-severity [ ;; Inspectees that can absorb the enforcement will continue violating 
       set compliance compliance 
