@@ -1,0 +1,53 @@
+to setup-results-file
+  file-open "results_v16.1.0_2022.05.17.txt"
+  file-type "      "
+  file-print Maintenance-Scenario
+  file-type "      "
+  file-print "day total-sediments-major[m^3]  G/Elhosh-minor-sediments[m^3]  Gimillia-minor-sediments[m^3]  Ballol-minor-sediments[m^3]  W/Elmahi-minor-sediments[m^3]  Toman-minor-sediments[m^3]  Gemoia-minor-sediments[m^3]  G/AbuGomri-minor-sediments[m^3]  avg-sediment-depth-major[m]  avg-sediment-depth-minor[m]  G/Elhosh-desilted-sediments[m^3]  Gimillia-desilted-sediments[m^3]  Ballol-desilted-sediments[m^3]  W/Elmahi-desilted-sediments[m^3]  Toman-desilted-sediments[m^3]  Gemoia-desilted-sediments[m^3]  G/AbuGomri-desilted-sediments[m^3]"
+  file-type "      "
+  file-close
+end
+
+to output-results
+  file-open "results_v16.1.0_2022.05.17.txt"
+  file-type "      "
+  file-type ticks mod 365
+  file-type "      "
+  file-type total-sediments-major
+  file-type "      "
+  file-type G/Elhosh-minor-sediments
+  file-type "      "
+  file-type Gimillia-minor-sediments
+  file-type "      "
+  file-type Ballol-minor-sediments
+  file-type "      "
+  file-type W/Elmahi-minor-sediments
+  file-type "      "
+  file-type Toman-minor-sediments
+  file-type "      "
+  file-type Gemoia-minor-sediments
+  file-type "      "
+  file-type G/AbuGomri-minor-sediments
+  file-type "      "
+  file-type avg-sediment-depth-major
+  file-type "      "
+  file-type avg-sediment-depth-minor
+  file-type "      "
+  file-type G/Elhosh-desilted-sediments
+  file-type "      "
+  file-type Gimillia-desilted-sediments
+  file-type "      "
+  file-type Ballol-desilted-sediments
+  file-type "      "
+  file-type W/Elmahi-desilted-sediments
+  file-type "      "
+  file-type Toman-desilted-sediments
+  file-type "      "
+  file-type Gemoia-desilted-sediments
+  file-type "      "
+  file-type G/AbuGomri-desilted-sediments
+  file-type "      "
+  file-print "      "
+  file-close
+  stop
+end

@@ -1,0 +1,51 @@
+to create-sediment-flow
+  ;; Set up the source of sediment flow in the Netlogo model world (which is the Zananda K57)
+  ;; as shown by the brown patches upon setup 
+  let source-flow patches with [ pycor > 55 and pycor <= 65 and pxcor < -26 and pxcor >= -28 ]
+  ask source-flow [
+    create-sediments-here 1
+    set pcolor brown
+    ask sediments-here [ 
+      set color brown 
+    ]
+  ]
+end
+
+to create-sediments-here [ num ]
+  if not any? sediments-here
+  [
+    sprout-sediments num
+    [
+      set size 1
+      set shape "square"
+      ifelse show-elevation-gradient
+      [ set color scale-color red [elevation] of patch-here elevation-min elevation-max ][ set color blue + 2 ]
+
+      ;; Equations and constants from Matthews, 1952 and Gismalla, 2009
+      set Q-scaled water-inflow * scale-factor
+      set Qs-scaled Q-scaled * sediment-concentration               ;; sediment load [kg/s]
+      set x-area-scaled ( 2.60 * Q-scaled ^ (5 / 6) )               ;; cross-sectional area [m^2]
+      let bed-slope-cm/km ( 13.90 * Q-scaled ^ (-1 / 6) )           ;; bed slope [cm/km]
+      set bed-slope-scaled bed-slope-cm/km / 100000                 ;; convert bed slope in cm/km to m/m
+      let P 5.51 * Q-scaled ^ 0.5
+      
+      let R x-area-scaled / P
+      let water-velocity Q-scaled / x-area-scaled
+      let chezy water-velocity / ( bed-slope-scaled * R ) ^ 0.5     ;; Equation by Mendez, 1998 and Winterwerp et al., 2022
+      let shear-velocity ( gravity ^ 0.5 * water-velocity / chezy ) ;; Equation by Winterwerp et al., 2022 
+      let shear-stress shear-velocity ^ 2 * water-density           ;; Equation by Winterwerp et al., 2022
+
+      set deposition-flux  ;; Equation from Krone, 1962
+      ( settling-velocity * sediment-concentration  )                          
+      let resusp-flux  ;; Equation from Partheniades, 1962
+      ( (rate-of-erosion ) * ((shear-stress / (crit-shear-erosion )) - 1) )    
+      ifelse resusp-flux < 0 [
+        set erosion-flux 0 ][
+        set erosion-flux resusp-flux ]  ;; if resuspension flux <= 0, there is no resuspension of deposited sediments
+
+      set sediment-volume (
+        sediment-volume + (deposition-flux * x-area-scaled / density-dry-sediment) ) ;; [m^3/s] (REF: Osman, 2015)
+      ask patch-here [ set sediment-depth (sediment-depth + [sediment-volume] of myself) / (cell-size ) ]  ;; [m]  
+    ]
+  ]
+end

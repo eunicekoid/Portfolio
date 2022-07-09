@@ -1,0 +1,353 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; This code simulates desilting conducted by centralized maintenance. ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; At full capacity, centralized maintenance can remove 8691.59 m^3 of sediments from seven minor canals.
+;; This equals to 96.57 m^3 per day for three months.
+;; This was calculated based on the capacity of excavators, the number of excavators, and the duration of maintenance
+;; which were scaled to focus only on the study area of this model.
+;; REF: Osman, 2015; Plusquellec, 1990
+
+to routine-desilt-g/elhosh
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    G/Elhosh-minor-sediments = 0 
+    [
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / G/Elhosh-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / G/Elhosh-minor-sediments )
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-gimillia
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    Gimillia-minor-sediments = 0 
+    [
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Gimillia-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Gimillia-minor-sediments )
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-ballol
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    Ballol-minor-sediments = 0 
+    [
+      set Ballol-desilted-sediments Ballol-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Ballol-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Ballol-desilted-sediments Ballol-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Ballol-minor-sediments )
+      set Ballol-desilted-sediments Ballol-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-w/elmahi
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    W/Elmahi-minor-sediments = 0 
+    [
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / W/Elmahi-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / W/Elmahi-minor-sediments )
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-toman
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    Toman-minor-sediments = 0 
+    [
+      set Toman-desilted-sediments Toman-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Toman-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Toman-desilted-sediments Toman-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Toman-minor-sediments )
+      set Toman-desilted-sediments Toman-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-gemoia
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    Gemoia-minor-sediments = 0 
+    [
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Gemoia-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Gemoia-minor-sediments )
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to routine-desilt-g/abugomri
+  let potential-sediments-removed central-maintenance-capacity * ( sediment-removal-full-capacity / n-minors-to-maintain ) 
+  (ifelse 
+    G/AbuGomri-minor-sediments = 0 
+    [
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / G/AbuGomri-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / G/AbuGomri-minor-sediments )
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; This code simulates adhoc removal of sediments by tenants ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; At full capacity, the tenants can remove a total of 4,068 m^3 in one day (one tick) for all the minor canals.
+;; This equals 581.14 m^3 per day for one canal. 
+
+to adhoc-desilt-g/elhosh
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    G/Elhosh-minor-sediments = 0 
+    [
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / G/Elhosh-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / G/Elhosh-minor-sediments )
+      set G/Elhosh-desilted-sediments G/Elhosh-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-gimillia
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    Gimillia-minor-sediments = 0 
+    [
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Gimillia-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Gimillia-minor-sediments )
+      set Gimillia-desilted-sediments Gimillia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-ballol
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    Ballol-minor-sediments = 0 
+    [
+      set Ballol-desilted-sediments Ballol-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Ballol-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Ballol-desilted-sediments Ballol-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Ballol-minor-sediments )
+      set Ballol-desilted-sediments Ballol-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-w/elmahi
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    W/Elmahi-minor-sediments = 0 
+    [
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / W/Elmahi-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / W/Elmahi-minor-sediments )
+      set W/Elmahi-desilted-sediments W/Elmahi-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-toman
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    Toman-minor-sediments = 0 
+    [
+      set Toman-desilted-sediments Toman-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Toman-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Toman-desilted-sediments Toman-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Toman-minor-sediments )
+      set Toman-desilted-sediments Toman-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-gemoia
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    Gemoia-minor-sediments = 0 
+    [
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / Gemoia-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / Gemoia-minor-sediments )
+      set Gemoia-desilted-sediments Gemoia-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ])
+end
+
+to adhoc-desilt-g/abugomri
+  let potential-sediments-removed adhoc-maintenance-capacity * tenant-removal-full-capacity 
+  (ifelse 
+    G/AbuGomri-minor-sediments = 0 
+    [
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments  
+      set sediment-volume sediment-volume
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    (potential-sediments-removed / G/AbuGomri-minor-sediments) > 1
+    [
+      let removal-fraction 1 
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]
+    [
+      let removal-fraction ( potential-sediments-removed / G/AbuGomri-minor-sediments )
+      set G/AbuGomri-desilted-sediments G/AbuGomri-desilted-sediments + (sediment-volume * removal-fraction) 
+      set sediment-volume (sediment-volume - (sediment-volume * removal-fraction) ) 
+      ask patch-here [ set sediment-depth ([sediment-volume] of myself) / (cell-size ) ]  ;; [m] 
+    ]) 
+end
+

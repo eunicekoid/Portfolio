@@ -1,0 +1,128 @@
+;; This code sets up the canal scheme in the Netlogo model interface 
+
+to setup-canals
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Setup Zananda Major Canal ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; The Zananda Major Canal has an average width of 20 m (REF: Osman, 2015)
+  ask patches with [ pycor > 55 and pycor <= 65 and pxcor < -26 and pxcor >= -194 ]
+  [ set canal-type "Major" set patch-type "canal" set pcolor blue + 2 ]
+
+  ;; Set up elevation gradient
+  let major-elevation-gradient ( 2.39 / 167 )  ;; From beginning to end of the Zananda, there is a 2.39 m elevation drop over its length of 16.7 km
+                                               ;; scaled to 167 patches long in the Netlogo model world
+  ask patches with [canal-type = "Major"]
+  [
+    set elevation ( 416.72 - (((pxcor + 26) * -1) * major-elevation-gradient) )  ;; [m]
+    create-sediments-here 1  ;; this sets up the initial condition of placing sediment agents in the Zananda Canal
+  ]
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Setup the Minor Canals ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Minor canals have an average width of 6 m and average length of 4.8 km (REF: Osman, 2015)
+  ;; There are three main offtakes: K7.4, K9.1, and K12.5 (REF: Osman, 2015; Ali, 2020)
+
+  ;; At K7.4, there are two minor offtakes: The G/Elhosh (northward) and Gimillia (southward)
+  ask patches with [ pycor > 65 and pycor <= 114 and pxcor < -98.5 and pxcor >= -101.5 ] ;; Sets up G/Elhosh minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 65 and pxcor = -100 ]
+    [ set landmark "G/Elhosh Weir" set pcolor yellow ]
+    let elshosh-elevation-start [elevation] of patch -100 65
+    let elshosh-elevation-gradient ( (elshosh-elevation-start - 413.22) / 48 )
+    set elevation ( elshosh-elevation-start - ((pycor - 65) * elshosh-elevation-gradient) )
+  ]
+  set G/Elhosh-minor-patches patches with [ pycor > 65 and pycor <= 114 and pxcor < -98.5 and pxcor >= -101.5 ]
+  ask G/Elhosh-minor-patches [ set canal-name "G/Elhosh" ]
+
+  ask patches with [ pycor > 6  and pycor <= 55 and pxcor < -98.5 and pxcor >= -101.5 ] ;; Sets up Gimillia minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 56 and pxcor = -100 ]
+    [ set landmark "Gimillia Weir" set pcolor yellow ]
+    let gimillia-elevation-start [elevation] of patch -100 56
+    let gimillia-elevation-gradient ( (gimillia-elevation-start - 414.25) / 48 )
+    set elevation ( gimillia-elevation-start - ((56 - pycor) * gimillia-elevation-gradient) )
+  ]
+  set Gimillia-minor-patches patches with [ pycor > 6  and pycor <= 55 and pxcor < -98.5 and pxcor >= -101.5 ]
+  ask Gimillia-minor-patches [ set canal-name "Gimillia" ]
+
+  ;; At K9.1, there are two minor offtakes: Ballol and W/Elmahi
+  ask patches with [ pycor > 6  and pycor <= 55 and pxcor < -115.5 and pxcor >= -118.5 ] ;; Sets up Ballol minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 56 and pxcor = -117 ]
+    [ set landmark "Ballol Weir" set pcolor yellow ]
+    let ballol-elevation-start [elevation] of patch -117 56
+    let ballol-elevation-gradient ( (ballol-elevation-start - 413.27) / 48 )
+    set elevation ( ballol-elevation-start - ((56 - pycor) * ballol-elevation-gradient) )
+  ]
+  set Ballol-minor-patches patches with [ pycor > 6  and pycor <= 55 and pxcor < -115.5 and pxcor >= -118.5 ]
+  ask Ballol-minor-patches [ set canal-name "Ballol" ]
+
+  ask patches with [ pycor > 6 and pycor <= 55 and pxcor < -119 and pxcor >= -122 ] ;; Sets up W/Elmahi minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 56 and pxcor = -121 ]
+    [ set landmark "W/Elmahi Weir" set pcolor yellow ]
+    let welmahi-elevation-start [elevation] of patch -121 56
+    let welmahi-elevation-gradient ( (welmahi-elevation-start - 414.32) / 48 )
+    set elevation ( welmahi-elevation-start - ((56 - pycor) * welmahi-elevation-gradient) )
+  ]
+  set W/Elmahi-minor-patches patches with [ pycor > 6 and pycor <= 55 and pxcor < -119 and pxcor >= -122 ]
+  ask W/Elmahi-minor-patches [ set canal-name "W/Elmahi" ]
+
+  ;; At K12.5, there are three minor offtakes: Toman, Gemoia, and G/Abu Gomri
+  ask patches with [ pycor > 65 and pycor <= 114 and pxcor < -149.5 and pxcor >= -152.5 ] ;; Sets up G/Abu Gomri minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 65 and pxcor = -151 ]
+    [ set landmark "G/Abu Gomri Weir" set pcolor yellow ]
+    let abugomri-elevation-start [elevation] of patch -151 65
+    let abugomri-elevation-gradient ( (abugomri-elevation-start - 413.19) / 48 )
+    set elevation ( abugomri-elevation-start - ((pycor - 65) * abugomri-elevation-gradient) )
+  ]
+  set G/AbuGomri-minor-patches patches with [ pycor > 65 and pycor <= 114 and pxcor < -149.5 and pxcor >= -152.5 ]
+  ask G/AbuGomri-minor-patches [ set canal-name "G/AbuGomri" ]
+
+  ask patches with [ pycor > 6  and pycor <= 55 and pxcor < -149.5 and pxcor >= -152.5 ] ;; Sets up Toman minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 56 and pxcor = -151 ]
+    [ set landmark "Toman Weir" set pcolor yellow ]
+    let toman-elevation-start [elevation] of patch -151 56
+    let toman-elevation-gradient ( (toman-elevation-start - 413.57) / 48 )
+    set elevation ( toman-elevation-start - ((56 - pycor) * toman-elevation-gradient) )
+  ]
+  set Toman-minor-patches patches with [ pycor > 6  and pycor <= 55 and pxcor < -149.5 and pxcor >= -152.5 ]
+  ask Toman-minor-patches [ set canal-name "Toman" ]
+
+  ask patches with [ pycor > 6 and pycor <= 55 and pxcor < -153 and pxcor >= -156 ] ;; Sets up Gemoia minor
+  [
+    set canal-type "Minor" set patch-type "canal" set pcolor blue + 3
+    ask patches with [ pycor = 56 and pxcor = -155 ]
+    [ set landmark "Gemoia Weir" set pcolor yellow ]
+    let gemoia-elevation-start [elevation] of patch -155 56
+    let gemoia-elevation-gradient ( (gemoia-elevation-start - 413.07) / 48 )
+    set elevation ( gemoia-elevation-start - ((56 - pycor) * gemoia-elevation-gradient) )
+  ]
+  set Gemoia-minor-patches patches with [ pycor > 6 and pycor <= 55 and pxcor < -153 and pxcor >= -156 ]
+  ask Gemoia-minor-patches [ set canal-name "Gemoia" ]
+
+  ;; Set land to be green color
+  ask patches [ if patch-type != "canal" [ set pcolor green - 3 set patch-type "land" ] ]
+
+  ;; Set drainage at the end of the Zananda Major Canal
+  ask patches with [patch-type = "canal"] [
+    if pxcor <= -193 [ set landmark "drainage" ] ]
+
+  ;; Visually show elevation gradient at setup if ticked on the inteface tab
+  set elevation-min min [elevation] of patches with [patch-type = "canal"]
+  set elevation-max max [elevation] of patches with [patch-type = "canal"]
+  if show-elevation-gradient [
+    ask patches with [patch-type = "canal"] [
+      set pcolor scale-color red elevation elevation-min elevation-max
+      ask sediments-here [ set color scale-color red [elevation] of patch-here elevation-min elevation-max ] ]
+  ]
+end
