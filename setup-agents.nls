@@ -1,0 +1,59 @@
+to setup-inspectees
+  ;; Set up initial condition of inspectees and their characteristics
+  ;; Delineate initial proportion of compliant vs. non-compliant inspectees
+  ask inspectees [
+    set color black 
+    set size 1
+    set shape "square"
+    set inspection-candidate false 
+    
+    ;; Determine distribution of revenue level among inspectees using logit-normal distribution 
+    let x random-normal mu sigma
+    let y (-1 * x)
+    set absorbance-capacity (1 / (1 + (exp y)))
+  ]
+  
+  let n-compliant-inspectees n-inspectees * (percent-compliance / 100) 
+  let n-noncompliant-inspectees n-inspectees - n-compliant-inspectees
+  
+  ;; Delineate initial condition of compliant inspectees 
+  ask n-of n-compliant-inspectees inspectees [
+    set compliance "compliant"
+    set color grey
+    set offense-severity 0
+  ]
+  
+  ;; Delineate types of offenders within the initial population of non-compliant inspectees
+  let n-unintentional-offenders n-noncompliant-inspectees * (percent-unintentional / 100) 
+  ask n-of n-unintentional-offenders inspectees with [compliance != "compliant"] [
+    set compliance "unintentional"
+    set color red - 1
+    set offense-severity 10
+    set n-historical-violations avg-historical-violations-unintentional
+  ]   
+  
+  let n-conscious-offenders n-noncompliant-inspectees * (percent-conscious / 100) 
+  ask n-of n-conscious-offenders inspectees with [compliance != "compliant" and compliance != "unintentional"] [
+    set compliance "conscious"
+    set color red - 2
+    set offense-severity 20
+    set n-historical-violations avg-historical-violations-conscious
+  ]   
+  
+  let n-criminal-offenders n-noncompliant-inspectees * (percent-criminal / 100) 
+  ask n-of n-criminal-offenders inspectees with [compliance != "compliant" and compliance != "unintentional" and compliance != "conscious"] [
+    set compliance "criminal"
+    set color red - 3
+    set offense-severity 30
+    set n-historical-violations avg-historical-violations-criminal
+  ]
+end
+
+to reset-inspectee-candidates
+  ;; Resets the inspectee-candidates agentset 
+  ask inspectees [
+    set inspection-candidate ""
+    set inspection-reaction ""
+  ]
+  set inspection-candidates ""
+end

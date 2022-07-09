@@ -1,0 +1,31 @@
+to setup-results-file
+  file-open "PABMI_simulation_results.txt"
+  file-type "      "
+  file-print Inspection-Strategy 
+  file-type "      "
+  file-print Enforcement-Strategy
+  file-type "      "
+  file-print "tick  avg-compliance-rate   #-compliant-inspectees #-unintentional-violators #conscious-violators #criminal-violators"
+  file-type "      "
+  file-close
+end
+
+to output-results
+  file-open "PABMI_simulation_results.txt"
+  file-type "      "
+  file-type ticks
+  file-type "      "
+  file-type avg-compliance-rate
+  file-type "         "
+  file-type #-compliant-inspectees
+  file-type "         "
+  file-type #-unintentional-violators
+  file-type "         "
+  file-type #-conscious-violators
+  file-type "         "
+  file-type #-criminal-violators
+  file-type "         "
+  file-print "      "
+  file-close
+  stop
+end

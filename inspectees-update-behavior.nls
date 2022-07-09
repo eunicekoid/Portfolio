@@ -1,0 +1,192 @@
+to act-according-to-enforcement  ;; This is not based on data - not phenomenological. There's no indication in the data on how inspectees react to enforcement. 
+  ask inspection-candidates with [compliance != "compliant"] [
+    ifelse absorbance-capacity >= enforcement-severity [ ;; Inspectees that can absorb the enforcement will continue violating 
+      set compliance compliance 
+      set offense-severity offense-severity 
+      set n-historical-violations n-historical-violations + 1 
+    ][
+      if absorbance-capacity < enforcement-severity [ ;; Inspectees that cannot absorb the enforcement will stop violating 
+        set compliance "compliant"
+        set offense-severity 0
+        set color grey
+      ]
+    ]
+  ]
+end
+
+to act-according-to-inspection-and-enforcement
+  let n-offenders count inspection-candidates with [compliance != "compliant"]
+  let n-escalating-inspectees round (n-offenders * (percent-escalate / 100))
+  let n-deescalating-inspectees round (n-offenders * (percent-deescalate / 100))
+  
+  let escalating-inspectees n-of n-escalating-inspectees inspection-candidates 
+  ask escalating-inspectees [set inspection-reaction "escalate"]
+  
+  let deescalating-inspectees n-of n-deescalating-inspectees inspection-candidates with [inspection-reaction != "escalate"]
+  ask deescalating-inspectees [set inspection-reaction "deescalate"]
+  
+  let non-escalatory-inspectees inspection-candidates with [inspection-reaction != "escalate" or inspection-reaction != "deescalate"]
+  
+  ask deescalating-inspectees [
+    ifelse compliance = "unintentional" [
+      set compliance "compliant"
+      set offense-severity 0
+      set color grey
+    ][
+      ifelse compliance = "conscious" [
+        set compliance "unintentional"
+        set n-historical-violations n-historical-violations + 1
+        set offense-severity 10
+        set color red - 1
+      ][
+        ifelse compliance = "criminal" [
+          set compliance "conscious"
+          set n-historical-violations n-historical-violations + 1
+          set offense-severity 20
+          set color red - 2 
+        ][
+          set compliance "compliant"
+          set offense-severity 0
+          set color grey
+        ]
+      ]
+    ]
+  ]
+  
+  ask escalating-inspectees [
+    ifelse compliance = "unintentional" [
+      set compliance "conscious"
+      set n-historical-violations n-historical-violations + 1
+      set offense-severity 20
+      set color red - 2
+    ][
+      ifelse compliance = "conscious" [
+        set compliance "criminal"
+        set n-historical-violations n-historical-violations + 1
+        set offense-severity 30
+        set color red - 3 
+      ][
+        ifelse compliance = "compliant"
+        [
+          set compliance "unintentional"
+          set n-historical-violations n-historical-violations + 1
+          set offense-severity 10
+          set color red - 1
+        ][
+          set compliance "criminal"
+          set n-historical-violations n-historical-violations + 1
+          set offense-severity 30
+          set color red - 3
+        ]
+      ]
+    ]
+  ]
+  
+  ask inspection-candidates with [compliance != "compliant"] [
+    ifelse absorbance-capacity >= enforcement-severity [ ;; Inspectees that can absorb the enforcement will continue violating 
+      set compliance compliance 
+      set offense-severity offense-severity 
+      set n-historical-violations n-historical-violations + 1 
+    ][
+      if absorbance-capacity < enforcement-severity [ ;; Inspectees that cannot absorb the enforcement will stop violating 
+        set compliance "compliant"
+        set offense-severity 0
+        set color grey
+      ]
+    ]
+  ]
+end
+
+to act-according-to-inspection
+  let n-offenders count inspection-candidates with [compliance != "compliant"]
+  let n-escalating-inspectees round (n-offenders * (percent-escalate / 100))
+  let n-deescalating-inspectees round (n-offenders * (percent-deescalate / 100))
+  
+  let escalating-inspectees n-of n-escalating-inspectees inspection-candidates 
+  ask escalating-inspectees [set inspection-reaction "escalate"]
+  
+  let deescalating-inspectees n-of n-deescalating-inspectees inspection-candidates with [inspection-reaction != "escalate"]
+  ask deescalating-inspectees [set inspection-reaction "deescalate"]
+  
+  ask deescalating-inspectees [
+    ifelse compliance = "unintentional" [
+      set compliance "compliant"
+      set offense-severity 0
+      set color grey
+    ][
+      ifelse compliance = "conscious" [
+        set compliance "unintentional"
+        set n-historical-violations n-historical-violations + 1
+        set offense-severity 10
+        set color red - 1
+      ][
+        ifelse compliance = "criminal" [
+          set compliance "conscious"
+          set n-historical-violations n-historical-violations + 1
+          set offense-severity 20
+          set color red - 2
+        ][
+          set compliance "compliant"
+          set offense-severity 0
+          set color grey
+        ]
+      ]
+    ]
+  ]
+  
+  ask escalating-inspectees [
+    ifelse compliance = "unintentional" [
+      set compliance "conscious"
+      set n-historical-violations n-historical-violations + 1
+      set offense-severity 20
+      set color red - 2
+    ][
+      ifelse compliance = "conscious" [
+        set compliance "criminal"
+        set n-historical-violations n-historical-violations + 1
+        set offense-severity 30
+        set color red - 3
+      ][
+        set compliance "criminal"
+        set n-historical-violations n-historical-violations + 1
+        set offense-severity 30
+        set color red - 3
+      ]
+    ]
+  ]
+ 
+end
+
+to act-according-to-peer-pressure
+  let peers inspectees in-radius radius
+  let mode-severity-peers modes [offense-severity] of peers 
+  
+  set offense-severity mean mode-severity-peers
+  ifelse offense-severity > 0 and offense-severity <= 10 [
+    set compliance "unintentional"
+    set offense-severity 10
+    set n-historical-violations n-historical-violations + 1 
+    set color red - 1
+  ][
+    ifelse offense-severity > 10 and offense-severity <= 20 [
+      set compliance "conscious"
+      set offense-severity 20
+      set n-historical-violations n-historical-violations + 1 
+      set color red - 2
+    ][
+      
+      ifelse offense-severity > 20 [
+        set compliance "criminal"
+        set offense-severity 30
+        set n-historical-violations n-historical-violations + 1
+        set color red - 3
+      ][
+        ifelse offense-severity <= 0 [
+          set compliance "compliant"
+          set offense-severity 0
+          set color grey
+        ][] 
+      ]
+    ]
+  ]
+end
