@@ -399,3 +399,14 @@ Figures 20, 21, and 22 show the sensitivity of changing soil parameters on the m
 <p style="margin-left: 1.5em; text-indent: -1.5em;">
   Pinder, G. F., & Celia, M. A. (2006). <em>Subsurface hydrology.</em> John Wiley & Sons.
 </p>
+
+
+
+
+
+<dl>
+  <dd>Cornell University. (2021). <em>Why preferential flow is important?</em> Retrieved June 9, 2021, from http&#58;//soilandwater.bee.cornell.edu/research/pfweb/educators/intro/why.htm</dd>
+  <dd>Gerke, H. H., & Van Genuchten, M. T. (1993). A dual-porosity model for simulating the preferential movement of water and solutes in structured porous media. <em>Water resources research, 29</em> (2), 305–319.</dd>
+  <dd>Mayer, A. S. (2005). <em>Soil and groundwater contamination: Nonaqueous phase liquids.</em> American Geophysical Union.</dd>
+  <dd>Pinder, G. F., & Celia, M. A. (2006). <em>Subsurface hydrology.</em> John Wiley & Sons.</dd>
+</dl>
