@@ -227,7 +227,7 @@ In this scenario, the top boundary condition for the slow flow fraction is assum
 
 
 
-When the pressure heads between the two domains are equal to each other, there is no exchange as exhibited by the foregoing scenarios. Therefore, below the depth at which the pressure heads are equal will also be saturated. It is anticipated that if the inflow of water at the top boundary conditions exceed the infiltration rate, not only will the soil columns be fully saturated, the water table will also rise. This increases more of the saturated zone. In the next scenario, more inflow will be modeled to examine the effects of higher inflow and potential rise in water table.
+When the pressure heads between the two domains are equal, there is no exchange as exhibited by the foregoing scenarios. Therefore, below the depth at which the pressure heads are equal will also be saturated. It is expected that if the inflow of water at the top boundary conditions exceeds the infiltration rate, not only will the soil columns be fully saturated, the water table will also rise. This increases more of the saturated zone. In the next scenario, more inflow will be modeled to examine the effects of higher inflow and potential rise in water table.
 
 ### Gravity bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$, with ponding at the top of slow flow fraction and a varying top boundary with higher inflow
 
@@ -303,7 +303,7 @@ To ensure the model used was set up correctly, the extension of the unsaturated 
   <em>Figure 14: Both fast and slow soil fractions have same soil properties, no flow top boundary condition, gravity flow at bottom boundary, no exchange, and equal partition of volume between the two flows. </em>
 </p>
 
-Figures 13 and 14 show the results of the model when the bottom boundary condition was gravity flow and the Robbin condition, respectively, and both slow and fast fractions had the same soil conditions, no exchange, and equal partition between the two soil fractions. These graphs match the unsaturated flow model.
+Figures 14 and 15 show the results of the model when the bottom boundary condition was gravity flow and the Robbin condition, respectively, and both slow and fast fractions had the same soil conditions, no exchange, and equal partition between the two soil fractions. These graphs match the unsaturated flow model.
 
 <p align="center">
   <img src="./images/SameSoilPar2(RobbinBot).png">
