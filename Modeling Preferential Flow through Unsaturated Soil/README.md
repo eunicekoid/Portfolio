@@ -127,7 +127,7 @@ With the Robbin condition at the bottom boundary, there is an external head that
 
 ### Gravity flow bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$
 
-To determine the value for $k_{ex}$, it was assumed that a small wormhole or crack would have a length dimension (dz) of $10^{-3}$ m or 1mm. Using Darcy's Law and the equation for $Q_{exchange}$, the $k_{ex}$ could be determined by $dz * K_{sat}$. Using the $K_{sat}$ from the slow flow regime, which is 0.010526 m/day, the $k_{ex}$ was determined to be $1.0526 \times 10^{-5}$ $m^2$/day for this scenario.
+To determine the value for $k_{ex}$, it was assumed that a small wormhole or crack would have a length dimension (dz) of $10^{-3}$ m or 1mm. Using Darcy's Law and the equation for $Q_{exchange}$, the $k_{ex}$ could be determined by $dz * K_{sat}$. Using the $K_{sat}$ from the slow flow regime, which is $0.010526$ $m/day$, the $k_{ex}$ was determined to be $1.0526 \times 10^{-5}$ $m^2$/day for this scenario.
 
 In the first 25 days when there is an inflow at the top boundary of the fast flow soil fraction, the water drains out of the fast flow column. There is a higher pressure head gradient between the two soil fractions during this time; therefore, the $Q_{exchange}$ rapidly declines as the pressure head in the slow flow column is greater than the pressure head in the fast flow column. During this time, the slow flow soil fraction is still in hydrostatic conditions. Once the inflow from the top stops after Day 25, there is a dynamic interaction that happens between the two columns. At first, the pressure head gradient starts to level out as the water continues to drain; as time goes on, there is insufficient water inflow, and the soil gets increasingly more saturated, which causes a reversal of the pressure gradient to favor the fast flow domain. The exchange changes to become negative, signaling an exchange from the fast flow to slow flow soil fractions. This reversal of the sign of $Q_{exchange}$ shows that as the fast flow soil gets more saturated from the inflow of water at the top boundary, the exchange flow reverses. Therefore, preferential flow occurs due to the different volumes of flow between the two zones; the water flows much faster through the fast flow zone due to the cracks and coarse nature. Once it is saturated, it will exchange with the slow flow fraction.
 
@@ -146,7 +146,7 @@ In the first 25 days when there is an inflow at the top boundary of the fast flo
 
 ### Robbin bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$
 
-Notably, the $k_{ex}$ set at the order of magnitude of $10^{-5}$ $m^2$/day does not alter the results from the scenario in Section 5.2. Looking at the $Q_{exchange}$ graphs below, it is evident that the external pressure head causes a quick flow through the column and the pressure head gradient quickly drops to zero. After the 25 day mark and over time, $Q_{exchange}$ becomes increasingly negative signifying the slight preferential flow through the fast flow soil column as it has a higher hydraulic conductivity and there is not enough inflow to sustain a high magnitude of exchange to the slow flow column. After day 25, the pressure head of the fast flow fraction increases above the pressure head of the slow flow fraction.
+Notably, the $k_{ex}$ set at the order of magnitude of $10^{-5}$ $m^2$/day does not alter the results from the scenario with a Robbin bottom boundary and $k_{ex} = 0$. Looking at the $Q_{exchange}$ graphs below, it is evident that the external pressure head causes a quick flow through the column and the pressure head gradient quickly drops to zero. After the 25 day mark and over time, $Q_{exchange}$ becomes increasingly negative signifying the slight preferential flow through the fast flow soil column as it has a higher hydraulic conductivity and there is not enough inflow to sustain a high magnitude of exchange to the slow flow column. After day 25, the pressure head of the fast flow fraction increases above the pressure head of the slow flow fraction.
 
 <p align="center">
   <img src="./images/4.B0.2Kex(-5)RobbinQex.png">
@@ -168,28 +168,247 @@ Notably, the $k_{ex}$ set at the order of magnitude of $10^{-5}$ $m^2$/day does 
 
 This scenario tests the sensitivity of the exchange resistance term by checking the model behavior if the $k_{ex}$ increases by one order of magnitude. More resistance means that it would be harder to exchange between the soil columns, as exhibited by the graphs below. The flow through the soil columns happens much faster. The pressure head gradient is much smaller between the two soil fractions, so the magnitude of $Q_{exchange}$ is small, and there is little exchange. Again, the pressure head of the slow flow domain lags behind the fast flow domain, and the flow goes faster through the fast flow zone than the slow flow zone. The bottom boundary of the fast flow domain experiences higher drainage than the slow flow domain.
 
-![Results of the model where $k_{ex}=1.05*10^{-4}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2$](./images/5.B0.2Kex(-4)Gravity.png)
-*Caption: $Q_{exchange}$ graphs where $k_{ex}=1.05*10^{-4}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2.*
+
+<p align="center">
+  <img src="./images/5.B0.2Kex(-4)Gravity.png">
+</p>
+<p align="center">
+  <em>Figure 7: </em>
+  <span style="white-space: nowrap;">
+    Q<sub>exchange</sub>
+  </span>
+  <em> graphs where </em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> gravity flow at the bottom boundary, and β = 0.2.</em>
+</p>
+
+
 
 ### Robbin bottom boundary and $k_{ex}=1.05*10^{-4}$ $m^2/day$
 
-Again, with the Robbin condition at the bottom boundary, the model behavior does not change compared to Scenarios 5.2 and 5.4. However, in this case, the magnitude of the $Q_{exchange}$ is even smaller; it, therefore, makes sense that there would not be enough exchange in this case to change the model results.
+Again, with the Robbin condition at the bottom boundary, the model behavior does not change compared to the foregoing scenarios with a Robbin bottom boundary. However, in this case, the magnitude of the $Q_{exchange}$ is even smaller; it, therefore, makes sense that there would not be enough exchange in this case to change the model results.
 
-![Results of the model where $k_{ex}=1.05*10^{-4}$ $m^2/day$, Robbin condition at the bottom boundary, and $\beta = 0.2$](./images/5.B0.2Kex(-4)Robbin.png)
-*Caption: $Q_{exchange}$ graphs where $k_{ex}=1.05*10^{-4}$ $m^2/day$, Robbin condition at the bottom boundary, and $\beta = 0.2.*
+<p align="center">
+  <img src="./images/5.B0.2Kex(-4)Robbin.png">
+</p>
+<p align="center">
+  <em>Figure 8: </em>
+  <span style="white-space: nowrap;">
+    Q<sub>exchange</sub>
+  </span>
+  <em> graphs where </em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> Robbin condition at the bottom boundary, and β = 0.2.</em>
+</p>
+
+
+
 
 ### Gravity bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$, with ponding at the top of slow flow fraction and a varying top boundary
 
 In this scenario, the top boundary condition for the slow flow fraction is assumed to be the same as the fast flow faction (previously, it was assumed that the flow only entered via the fast flow fraction only). When the flow is too slow at the top boundary of the slow flow fraction, ponding occurs where the additional water flux will create infiltration of water into the soil. The extra infiltration sustains the pressure head in the slow flow column after there is a reversal of the direction of $Q_{exchange}$ after 25 days. The larger magnitude of the $Q_{exchange}$ term shows that the pressure gradient is highest in this scenario than the preceding scenarios, indicating more significant exchange between the two soil columns. The ponding allows for the model to continue working even after the soil hits full saturation by switching to the Dirichlet boundary condition. It is evident that in this situation, the pressure head of the slow flow soil fraction still lags behind the fast flow soil fraction. Most of the flow from both the top boundary condition and spillover from the slow flow domain still enters the fast flow domain first as the water flows faster through the fast flow column.
 
-![Results of the model with ponding in slow flow fraction, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2$](./images/6.B0.2Kex(-5)GravityPonding.png)
-*Caption: Results of the model with ponding in slow flow fraction, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2.*
+
+<p align="center">
+  <img src="./images/6.B0.2Kex(-5)GravityPonding.png">
+</p>
+<p align="center">
+  <em>Figure 9: Results of the model with ponding in slow flow fraction,</em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> gravity flow at the bottom boundary, and β = 0.2.</em>
+</p>
+
+
+
 
 When the pressure heads between the two domains are equal to each other, there is no exchange as exhibited by the foregoing scenarios. Therefore, below the depth at which the pressure heads are equal will also be saturated. It is anticipated that if the inflow of water at the top boundary conditions exceed the infiltration rate, not only will the soil columns be fully saturated, the water table will also rise. This increases more of the saturated zone. In the next scenario, more inflow will be modeled to examine the effects of higher inflow and potential rise in water table.
 
 ### Gravity bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$, with ponding at the top of slow flow fraction and a varying top boundary with higher inflow
 
-In this scenario, the top boundary condition for the slow flow fraction is assumed to be the same as the fast flow fraction. The inflow of water at the top boundary conditions exceeds the infiltration rate. There is a rapid ponding effect, and the pressure head of the soil columns equilibrates quickly to the external boundary conditions, which are set by the inflow of water at the top boundary conditions. It is evident that there is more ponding at the top boundary conditions in this scenario. The pressure heads of the two columns equalize very quickly, and the ponding effect allows for the pressure heads to be sustained for a more extended period after the spillover occurs. There is no exchange between the two soil fractions, as the pressure heads are equal, and the pressure head is sustained over time by the external boundary conditions.
+In this scenario, the top boundary condition was doubled, and both the fast and slow flow top boundaries had this inflow condition. As exhibited by the $Q_{exchange}$ graphs in Figure 10, as time goes by, the depth at which there is no more exchange starts to become increasingly deeper. At the depth where $Q_{exchange}$ becomes zero and below, there is no exchange because the higher inflow causes the soil to be fully saturated at that depth as the water flows through the soil column. Because there is slow flow in the slow flow domain, ponding occurs which causes the flow to move horizontally to the fast flow domain, as there is too much inflow at the top boundary; this is exhibited by the positive $Q_{exchange}$ term at the soil layers closer to the top, especially at the beginning of model simulation. As time goes by and as certain soil layers get saturated in the fast flow column, the exchange of flow reverses so that $Q_{exchange}$ flows from fast to slow flow domains. Moreover, as the flow starts to be insufficient to penetrate to the even deeper layers of the soil, the exchange flow starts to reverse due to the difference in level of saturation between the fast and slow flow domains that changes.
 
-![Results of the model with ponding in slow flow fraction, higher inflow, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2$](./images/7.B0.2Kex(-5)GravityPondingHigherInflow.png)
-*Caption: Results of the model with ponding in slow flow fraction, higher inflow, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2.*
+<p align="center">
+  <img src="./images/7.B0.2Kex(-5)GravityPondingHighInflow.png">
+</p>
+<p align="center">
+  <em>Figure 10: Results of the model with ponding in slow flow fraction, higher inflow, </em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> gravity flow at the bottom boundary, and β = 0.2.</em>
+</p>
+
+The inflow was increased further to see its effects on the coupled process between the two domains. At a higher inflow at the top boundary of the slow flow and fast flow columns, ponding is more severe; therefore, the $Q_{exchange}$ remains positive for the entire model run. Yet, the flow through the fast column is still faster than the flow through the slow flow column. 
+
+
+<p align="center">
+  <img src="./images/8.B0.2Kex(-5)GravityPondingHigherInflow.png">
+</p>
+<p align="center">
+  <em>Figure 11: Results of the model with ponding in slow flow fraction, </em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> gravity flow at the bottom boundary, and β = 0.2, and a constant top boundary condition of -0.01 m/day.</em>
+</p>
+
+Interestingly, if the top boundary of the slow flow domain was set to no flow, the $Q_{exchange}$ term becomes negative over time, as there is exchange from the fast flow domain to the slow flow domain because the fast flow domain is more saturated. 
+
+<p align="center">
+  <img src="./images/8.B0.2Kex(-5)GravityPondingHigherInflowNOFLOw.png">
+</p>
+<p align="center">
+  <em>Figure 12: Results of the model with ponding in slow flow fraction, </em>
+  <span style="white-space: nowrap;">
+    k<sub>ex</sub> = 1.05 &times; 10<sup>-5</sup> m<sup>2</sup>/day,
+  </span>
+  <em> gravity flow at the bottom boundary, and β = 0.2, and no flow top boundary condition for the slow flow domain.</em>
+</p>
+
+## Conclusion
+
+Preferential flow is driven by the difference in volume of flow through the fast flow and slow flow columns as well as the differences in soil properties. With varying top boundary conditions, most of the flow still enters through the fast flow soil domain. Therefore, it is a safe assumption to model no flow through the top boundary of the slow flow soil fraction. The resistance term in the $Q_{exchange}$ term governs the exchange of flow between the two soil columns; the higher the resistance, the less exchange there is. Changes in the $Q_{exchange}$ term depend on the level of saturation of both the fast and slow flow domains; this relation is what couples the process of unsaturated flow between the dual porosity soil domains. Because of the different soil properties between the two soil fractions, preferential flow can be observed as the water flows faster through the coarser fraction than the finer fraction, making the residual water content in the slow flow fraction higher than in the slow flow fraction. The pressure head of the slow flow domain lags behind the pressure head of the fast flow domain; the difference in pressure head between the two domains will impact the exchange. Preferential flow is also influenced by the boundary conditions; with a high external head at the bottom boundary, the flow through the columns might be too fast for there to be any sufficient exchange or the external head could influence the flow rate. Also, with a large inflow and ponding occurring at the top of the slow flow domain, the flow will move laterally to the fast flow domain. Overall, the cracks in the soil within the fast flow region imply that the porosity of the fast flow domain is higher; moreover, the permeability is higher which makes water prefer the flow through the fast flow domain.
+
+
+### Future Extensions of the Model
+
+This model could be extended to further study the effects of coupled processes in preferential flow. This model assumes that the soil parameters do not change with different depths, temperature, or density. Making these parameters change concerning different environmental conditions will help study the coupled process under varying conditions. Additionally, changing the boundary conditions to observe how the model behaves differently could provide valuable insights. 
+
+Other processes could be incorporated, such as root water uptake, to further extend the model. Including meteorological data could simulate real-life situations with changing unsaturated flow due to different inflow rates of water. Extending the model to include these scenarios will provide deeper insight into the effects of the dual porosity system.
+
+## Appendix
+
+To ensure the model used was set up correctly, the extension of the unsaturated flow model was done in a step-wise fashion. The results of the extension are shown below. First, both the fast and slow soil fractions were set to the same soil parameters which was sand according to the parameters denoted in Mayer (2005) who cited Carsel & Parrish (1988).
+
+
+
+<p align="center">
+  <img src="./images/soilParMayer.png">
+</p>
+<p align="center">
+  <em>Figure 13: Soil parameters for 12 major soil groupd (Mayer, 2005). </em>
+</p>
+<br><br>
+
+<p align="center">
+  <img src="./images/SameSoilPar1(GravityBot).png">
+</p>
+<p align="center">
+  <em>Figure 14: Both fast and slow soil fractions have same soil properties, no flow top boundary condition, gravity flow at bottom boundary, no exchange, and equal partition of volume between the two flows. </em>
+</p>
+
+Figures 13 and 14 show the results of the model when the bottom boundary condition was gravity flow and the Robbin condition, respectively, and both slow and fast fractions had the same soil conditions, no exchange, and equal partition between the two soil fractions. These graphs match the unsaturated flow model.
+
+<p align="center">
+  <img src="./images/SameSoilPar2(RobbinBot).png">
+</p>
+<p align="center">
+  <em>Figure 15: Both fast and slow soil fractions have same soil properties, no flow top boundary condition, Robbin condition at bottom boundary, no exchange, and equal partition of volume between the two flows. </em>
+</p>
+
+
+Then, the top boundary condition was varied to -0.001 m/day of flow in the first 25 days, then zero flow for the next 200 days. Again, these results match the results from the unsaturated flow model, as shown in Figures 16 and 17.
+
+<p align="center">
+  <img src="./images/SameSoilPar3(GravityBot,VaryTop).png">
+</p>
+<p align="center">
+  <em>Figure 16: Both fast and slow soil fractions have same soil properties, varying top boundary condition, gravity flow at bottom boundary, no exchange, and equal partition of volume between the two flows. </em>
+</p>
+
+<br><br>
+
+<p align="center">
+  <img src="./images/SameSoilPar4(RobbinBot,VaryTop).png">
+</p>
+<p align="center">
+  <em>Figure 17: Both fast and slow soil fractions have same soil properties, varying top boundary condition, Robbin condition at bottom boundary, no exchange, and equal partition of volume between the two flows. </em>
+</p>
+
+
+The code was then tested to ensure that $\beta$ appropriately partitions the flow by volume between the two soil fractions. Figures 18 and 19 show the results of the model when $\beta = 0.2$, as this parameter which is the fraction of porosity associated with the fast flow is typically between 2-30%. 
+
+<p align="center">
+  <img src="./images/SameSoilPar5(B0.2,GravityBot,VaryTop).png">
+</p>
+<p align="center">
+  <em>Figure 18: Both fast and slow soil fractions have same soil properties, varying top boundary condition, gravity flow at bottom boundary, no exchange, and β = 0.2.</em>
+</p>
+
+<br><br>
+
+<p align="center">
+  <img src="./images/SameSoilPar6(B0.2,RobbinBot,VaryTop).png">
+</p>
+<p align="center">
+  <em>Figure 19: Both fast and slow soil fractions have same soil properties, varying top boundary condition, Robbin condition at bottom boundary, no exchange, and β = 0.2. </em>
+</p>
+
+The behavior of these graphs was as expected, and therefore the test scenarios could be modeled using this Python code. 
+
+### Determining Soil Parameters
+
+Figures 20, 21, and 22 show the sensitivity of changing soil parameters on the model behavior.
+
+<p align="center">
+  <img src="./images/DiffSoilMayerSandSiltyClay.png">
+</p>
+<p align="center">
+  <em>Figure 20: Results of the model using soil parameters determined by Mayer (2005) for sand (fast flow) and silty clay (slow flow), with varying top boundary conditions, gravity flow at the bottom boundary, no exchange between the two soil fractions, and β = 0.2.</em>
+</p>
+
+<br><br>
+
+<p align="center">
+  <img src="./images/DiffSoilMayerSandSiltyClay0.01.png">
+</p>
+<p align="center">
+  <em>Figure 21: Results of the model using a hydraulic conductivity for the slow flow zone of 0.01 m/day. </em>
+</p>
+
+<br><br>
+
+<p align="center">
+  <img src="./images/DiffSoilMayerSandSiltyClay0.08thetasat.png">
+</p>
+<p align="center">
+  <em>Figure 22: Results of the model using a hydraulic conductivity for the slow flow zone of 0.01 m/day and a saturated water content of 0.08. </em>
+</p>
+
+## References
+
+
+<style>
+  .hanging-indent {
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+  }
+</style>
+
+<p class="hanging-indent">
+  Cornell University. (2021). <em>Why preferential flow is important?</em> Retrieved June 9, 2021, from http:
+//soilandwater.bee.cornell.edu/research/pfweb/educators/intro/why.htm
+
+</p>
+
+<p class="hanging-indent">
+  Gerke, H. H., & Van Genuchten, M. T. (1993). A dual-porosity model for simulating the preferential movement of water and solutes in structured porous media. <em>Water resources research, 29</em> (2), 305–319.
+</p>
+
+</p>
+
+<p class="hanging-indent">
+  Mayer, A. S. (2005). <em>Soil and groundwater contamination: Nonaqueous phase liquids.<em> American Geo-physical Union.
+
+</p>
+
+<p class="hanging-indent">
+  Pinder, G. F., & Celia, M. A. (2006). <em>Subsurface hydrology.</em> John Wiley Sons.
+
+</p>
