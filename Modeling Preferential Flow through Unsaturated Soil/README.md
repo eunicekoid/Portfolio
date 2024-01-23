@@ -187,4 +187,9 @@ In this scenario, the top boundary condition for the slow flow fraction is assum
 
 When the pressure heads between the two domains are equal to each other, there is no exchange as exhibited by the foregoing scenarios. Therefore, below the depth at which the pressure heads are equal will also be saturated. It is anticipated that if the inflow of water at the top boundary conditions exceed the infiltration rate, not only will the soil columns be fully saturated, the water table will also rise. This increases more of the saturated zone. In the next scenario, more inflow will be modeled to examine the effects of higher inflow and potential rise in water table.
 
-### Gravity bottom boundary and 
+### Gravity bottom boundary and $k_{ex}=1.05*10^{-5}$ $m^2/day$, with ponding at the top of slow flow fraction and a varying top boundary with higher inflow
+
+In this scenario, the top boundary condition for the slow flow fraction is assumed to be the same as the fast flow fraction. The inflow of water at the top boundary conditions exceeds the infiltration rate. There is a rapid ponding effect, and the pressure head of the soil columns equilibrates quickly to the external boundary conditions, which are set by the inflow of water at the top boundary conditions. It is evident that there is more ponding at the top boundary conditions in this scenario. The pressure heads of the two columns equalize very quickly, and the ponding effect allows for the pressure heads to be sustained for a more extended period after the spillover occurs. There is no exchange between the two soil fractions, as the pressure heads are equal, and the pressure head is sustained over time by the external boundary conditions.
+
+![Results of the model with ponding in slow flow fraction, higher inflow, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2$](./images/7.B0.2Kex(-5)GravityPondingHigherInflow.png)
+*Caption: Results of the model with ponding in slow flow fraction, higher inflow, $k_{ex}=1.05*10^{-5}$ $m^2/day$, gravity flow at the bottom boundary, and $\beta = 0.2.*
