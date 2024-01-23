@@ -10,4 +10,5 @@ Concepts that drive the rate of water flow through porous media, such as capilla
 
 $$q_{\alpha} = \frac{\textbf{k}k_{r\alpha}}{\mu_{\alpha}}(\mathbf{\nabla}p_{\alpha}-\rho_{\alpha}\textbf{g})$$
 
-where $q_{\alpha}$ is the water discharge rate in $\frac{L^2}{T}$, \textbf{k} is the permeability in $L^2$, $k_{r\alpha}$ is the relative permeability (dimensionless), $\mu_{\alpha}$ is the dynamic viscosity in Pascals\cdot T, $(\mathbf{\nabla}p_{\alpha}-\rho_{\alpha}\textbf{g})$ is the pressure gradient. Note that L indicates a length-based unit like meters and T indicates a time-based unit like seconds. 
+where $q_{\alpha}$ is the water discharge rate in $\frac{L^2}{T}$, $\textbf{k}$ is the permeability in $L^2$, $k_{r\alpha}$ is the relative permeability (dimensionless), $\mu_{\alpha}$ is the dynamic viscosity in Pascals\cdot T, $(\mathbf{\nabla}p_{\alpha}-\rho_{\alpha}\textbf{g})$ is the pressure gradient. Note that L indicates a length-based unit like meters and T indicates a time-based unit like seconds. 
+
