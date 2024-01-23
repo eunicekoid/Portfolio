@@ -9,7 +9,7 @@ The code extends the Richards equation to model two fractions in the soil: 1. Fa
 Concepts that drive the rate of water flow through porous media, such as capillary pressure, hydraulic head and fluid potential, are related to the energy gradient in Darcy’s Law (Pinder and Celia, 2006). The model uses the extended form of Darcy’s law for groundwater flow, as it describes the simultaneous flow of non-homogeneous phases (Mayer, 2005). The modeled system has non-homogeneous phases because it is a porous medium where two immiscible phases are present; this is needed to create capillary pressure that retains water (Mayer, 2005). The extended form of Darcy’s equation is:
 
 ```
-q_{\alpha} = \frac{\mathbf{k}k_{r\alpha}}{\mu_{\alpha}}(\nabla p_{\alpha} - \rho_{\alpha}\mathbf{g})
+[q_{\alpha} = \frac{\mathbf{k}k_{r\alpha}}{\mu_{\alpha}}(\nabla p_{\alpha} - \rho_{\alpha}\mathbf{g})]
 ```
 
 
