@@ -10,4 +10,4 @@
     <img src="images/go.png?raw=true" style="transform: scale(.5);">
 
 
-<img src="images/Gezira.gif" width="40" height="40" />
+<img src="images/Gezira.gif"/>
