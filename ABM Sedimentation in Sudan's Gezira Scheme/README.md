@@ -8,3 +8,6 @@
 5. Adjust any parameters using the sliders and switches
 6. Click the go button to start the simulation <br>
     <img src="images/go.png?raw=true" style="transform: scale(.5);">
+
+
+<img src="images/Gezira.gif" width="40" height="40" />
