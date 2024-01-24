@@ -24,10 +24,9 @@ where $q_{\alpha}$ is the water discharge rate in $\frac{L^2}{T}$, $\textbf{k}$ 
 The Van Genuchten and effective saturation equations are needed to calculate the relative permeability, $k_{r\alpha}$. The Van Genuchten equation models the soil's water retention by relating the water content to the soil’s empirical parameters (Mayer, 2005; Pinder and Celia, 2006).
 
 $$S_{eff}(h_c)= 
-\begin{cases}
     [1+(\alpha h_{c})^n]^{-m}   ,& h_{c}>0\\
     1,                           & h_{c}\leq 0
-\end{cases}$$
+$$
 
 $$
 S_{\text{eff}}(h_c) = 
