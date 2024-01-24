@@ -1,3 +1,4 @@
+[View code here](https://github.com/eunicekoid/Portfolio/blob/main/Modeling%20Preferential%20Flow%20through%20Unsaturated%20Soil/1_Koid_PreferentialFlow_UnsaturatedSoil_1DDualPorosity.ipynb)
 ## Introduction
 
 This model, written in Python, expands upon the Richards Equation for the movement of water through unsaturated soils to include preferential flow. Preferential flow occurs when there are cracks or holes in the soil due to, for example, plowing that breaks up aggregates, roots, or wormholes, allowing uneven movement of water through porous media like soils (Cornell University, 2021). The cracks and holes allow for faster water flow than the bulk of the soil. These areas also allow for deeper penetration of water, which could have implications for groundwater quality (Cornell University, 2021).
