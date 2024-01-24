@@ -87,7 +87,11 @@ If the $h_{w,fast}$ > $h_{h,slow}$, then the $Q_{exchange}$ is negative, indicat
 
 </details>
 
-## Methods and Approach
+## Methodology 
+
+<details>
+<summary><b><u>Approach</b></u></summary>
+<br> 
 To implement the equations in the model, the following steps were taken. Firstly, both domains were defined to have the same top and boundary conditions and the same number of nodes; the soil column used for both is the same. The flow was assumed to enter through the fast flow zone only. The Richards Equation was modeled with two states with identical soil properties and a $Q_{exchange}$ of zero to see if the model produced identical results as unsaturated flow, as in this case, there is no exchange between the zones. The model solves both of the states of the two domains in parallel. The fast flow zone is controlled by $\beta$, with $\beta \theta_{sat}$ indicating the pore space in the fast flow zone. Then, the parameters were varied to have different soil parameters to study the behavior of the fast and slow flow zones. After that, the exchange term can be also changed to model the preferential flow. From the exchange term, $Q_{exchange}$, it is evident that the difference between the pressure heads of the fast and slow flow zones and therefore the $Q_{exchange}$ will dominate the flow process. To see the results of this stepwise expansion of the model, please see the Appendix. The model was then used to run different scenarios to see the effect of preferential flow through unsaturated soils; these scenarios contain different boundary conditions and model parameters to see how the model results change with under varying conditions. The scenarios will be further detailed in an upcoming section.
 
 To model the unsaturated flow, discretization was used in a one-dimensional staggered grid scheme to capture the flow in a continuous way through small time steps and depth increments. The nodes represent the soil layers, and the internodes represent the space between soil layers as shown in Figure 1.
@@ -100,8 +104,12 @@ To model the unsaturated flow, discretization was used in a one-dimensional stag
 </p>
 
 The discretization was then done using a Jacobian matrix for the Python ODE solver. To couple the flows, two state variables were used throughout the model functions. The top and bottom boundary conditions depended on the scenario. In the no flow top boundary condition, the flow at the top is zero. In the varying top boundary condition, there is a 0.001 m/day flow for the first 25 days, and then no flow for the next 200 days. In the gravity flow bottom boundary condition, only gravity (a zero pressure head gradient) impacts the bottom boundary. In the Robbin condition at the bottom boundary, the flow is determined by the mixed Robbin condition which is the negative of the Robbin resistance term multiplied by the difference between the water pressure head and the external head of -1m. These values were given as part of the model for unsaturated flow.
+</details>
 
-### Parameter Values and Initial Conditions
+<details>
+<summary><b><u>Parameter Values and Initial Conditions</b></u></summary>
+<br> 
+
 The initial conditions were given according to the model for unsaturated flow. The initial soil column length was taken to be one meter and the phreatic water level was 25 centimeters. Therefore, the initial pressure head was determined to be $h_{w,initial} = zRef - zN$, where $zRef$ is the depth of the phreatic water table and $zN$ is the depth. The initial pressure head at the top boundary, $zRef$, and bottom boundary were -0.25m, 0m, and 0.75m, respectively.
 
 The parameter values used in the model were the soil parameters from Gerke and Van Genuchten (1993). Figure 2 shows the soil parameters used in the Python code, where the fracture and matrix soil parameters were taken to be the fast flow and slow flow fractions, respectively.
@@ -115,6 +123,7 @@ The parameter values used in the model were the soil parameters from Gerke and V
 </p>
 
 These parameters were determined to be the best ones to use after calibrating the model with different soil parameters and testing the sensitivity of changes in soil parameters on the model outcomes. For example, using the sand and silty clay parameters from Mayer (2005) as shown in Figure 13 in the Appendix, the results as shown in Figure 20 were produced. The slow flow soil had a significant negative pressure head. This indicates that the water is draining very quickly out of the slow flow soil column. The flow of water is influenced by hydraulic conductivity. When the hydraulic conductivity in the slow flow fraction was changed to be 0.01 m/day, comparable to the value indicated in Gerke and Van Genuchten (1993), the pressure head in the slow flow fraction was much less negative, which confirms that the hydraulic conductivity influences the flow as shown in Figure 21. A lower permeability means there is slower flow. Then, the sensitivity of the saturated water content was tested by raising it; the results are shown in Figure 22. Again, the pressure head in the slow flow column was much less negative. With a higher saturated water content, the water storage also increases. The higher saturation capacity means that more soil pores are filled with and conducting water; the water does not drain as quickly. Therefore, a higher saturation water content as determined by Gerke and Van Genuchten
+</details>
 
 ## Scenarios
 ### Gravity flow bottom boundary, and $k_{ex}=0$
