@@ -31,6 +31,17 @@ S_{\text{eff}}(h_c) =
 \end{cases}
 $$
 
+$$
+S_{\text{eff}}(h_c) = 
+\left\{
+\begin{array}{ll}
+    [1 + (\alpha h_c)^n]^{-m}, & \text{if } h_c > 0 \\
+    1, & \text{if } h_c \leq 0
+\end{array}
+\right.
+$$
+
+
 where $\alpha$ is an empirical parameter of the soil in $L^{-1}$ which is the point on the water retention curve where $S_{eff}=0$. $h_{c}$ is the capillary pressure head in length-based unit. $n$ and $m$ are empirical soil parameters where $n=\frac{1}{1-m}$ and $m=1-(\frac{1}{n})$ (Mayer, 2005). With $S_{eff}$ known using the equation above, the volumetric water content, $\theta_{w}$ $(L^3 L^{-3})$, can be calculated via the effective saturation equation as shown in the following equation.
 
 $$S_{eff} = \frac{\theta_{w}-\theta_{res}}{\theta_{sat}-\theta_{res}}$$
