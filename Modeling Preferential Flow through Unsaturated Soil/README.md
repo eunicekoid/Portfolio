@@ -96,12 +96,8 @@ To implement the equations in the model, the following steps were taken. Firstly
 
 To model the unsaturated flow, discretization was used in a one-dimensional staggered grid scheme to capture the flow in a continuous way through small time steps and depth increments. The nodes represent the soil layers, and the internodes represent the space between soil layers as shown in Figure 1.
 
-<p align="center">
-  <img src="images/StaggeredGridDualPorosity.png">
-</p>
-<p align="center">
-  <em>Figure 1: Staggered grid scheme for discretization and dual porosity conceptual model.</em>
-</p>
+<img src="images/StaggeredGridDualPorosity.png">
+<em>Figure 1: Staggered grid scheme for discretization and dual porosity conceptual model.</em>
 
 The discretization was then done using a Jacobian matrix for the Python ODE solver. To couple the flows, two state variables were used throughout the model functions. The top and bottom boundary conditions depended on the scenario. In the no flow top boundary condition, the flow at the top is zero. In the varying top boundary condition, there is a 0.001 m/day flow for the first 25 days, and then no flow for the next 200 days. In the gravity flow bottom boundary condition, only gravity (a zero pressure head gradient) impacts the bottom boundary. In the Robbin condition at the bottom boundary, the flow is determined by the mixed Robbin condition which is the negative of the Robbin resistance term multiplied by the difference between the water pressure head and the external head of -1m. These values were given as part of the model for unsaturated flow.
 </details>
