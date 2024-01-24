@@ -23,23 +23,10 @@ where $q_{\alpha}$ is the water discharge rate in $\frac{L^2}{T}$, $\textbf{k}$ 
 
 The Van Genuchten and effective saturation equations are needed to calculate the relative permeability, $k_{r\alpha}$. The Van Genuchten equation models the soil's water retention by relating the water content to the soil’s empirical parameters (Mayer, 2005; Pinder and Celia, 2006).
 
-$$
-S_{\text{eff}}(h_c) = 
-\begin{cases}
-    [1 + (\alpha h_c)^n]^{-m}, & \text{if } h_c > 0 \\
-    1, & \text{if } h_c \leq 0
-\end{cases}
-$$
 
-$$
-S_{\text{eff}}(h_c) = 
-\left\{
-\begin{array}{ll}
-    [1 + (\alpha h_c)^n]^{-m}, & \text{if } h_c > 0 \\
-    1, & \text{if } h_c \leq 0
-\end{array}
-\right.
-$$
+
+$$\text{if } h_c > 0 \text{, } S_{\text{eff}}(h_c) = [1 + (\alpha h_c)^n]^{-m}$$
+$$\text{if } h_c \leq 0 \text{, } S_{\text{eff}}(h_c) = 1$$
 
 
 where $\alpha$ is an empirical parameter of the soil in $L^{-1}$ which is the point on the water retention curve where $S_{eff}=0$. $h_{c}$ is the capillary pressure head in length-based unit. $n$ and $m$ are empirical soil parameters where $n=\frac{1}{1-m}$ and $m=1-(\frac{1}{n})$ (Mayer, 2005). With $S_{eff}$ known using the equation above, the volumetric water content, $\theta_{w}$ $(L^3 L^{-3})$, can be calculated via the effective saturation equation as shown in the following equation.
