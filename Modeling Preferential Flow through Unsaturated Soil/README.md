@@ -17,7 +17,9 @@ where $q_{\alpha}$ is the water discharge rate in $\frac{L^2}{T}$, $\textbf{k}$ 
 
 </details>
 
-### Effective Saturation, Van Genuchten, and Relative Permeability
+<details>
+<summary><b><u>Effective Saturation, Van Genuchten, and Relative Permeability</b></u></summary>
+<br> 
 
 The Van Genuchten and effective saturation equations are needed to calculate the relative permeability, $k_{r\alpha}$. The Van Genuchten equation models the soil's water retention by relating the water content to the soil’s empirical parameters (Mayer, 2005; Pinder and Celia, 2006).
 
@@ -35,7 +37,11 @@ while the relative permeability can be found by the following equation (Pinder a
 
 $$k_{rw} = (S_{eff})^3$$
 
-### Richard's Equation
+</details>
+
+<details>
+<summary><b><u>Richard's Equation</b></u></summary>
+<br> 
 The pressure head form of the Richards Equation is as follows. 
 
 $$[C(h_{w}) + S_{w}S^w_{s}]\frac{\delta h_{w}}{\delta t} - \mathbf{\nabla} \cdot [K^w_{sat} k_{rw}(\mathbf{\nabla} h_{w} + \mathbf{\nabla}z)]=0$$
@@ -47,8 +53,12 @@ $S^w_{s}$ is the storativity coefficient which is the specific water capacity of
 $$S^w_{s} = \rho_{w} g (C_v+\epsilon \beta_w)$$
 
 where $C_v$ is the compressibility of the soil, $\epsilon$ is the porosity of the soil, $\beta_w$ is the compressibility of water, $\rho_w$ is the density of water, and $g$ is gravitational acceleration.    
+</details>
 
-### Dual Porosity Concept
+<details>
+<summary><b><u>Dual Porosity Concept</b></u></summary>
+<br> 
+
 In the dual porosity model, the fast flow fraction can have different soil properties than the slow flow fraction; a Darcy’s Law-based water flow is considered for both porosity systems by using a "first-order coupling term" (Gerke and Van Genuchten, 1993). In this model, the densities of both the solid and liquid phases are constant, and temperature, air pressure, and solute concentration effects are considered to be negligible (Gerke and Van Genuchten, 1993).
 
 The fast and slow flows are modeled based on the extended form of Darcy’s Law.
@@ -74,6 +84,8 @@ $$\frac{\delta \theta_{w,fast}}{\delta t} + \mathbf{\nabla} \cdot q_{w,fast} + Q
 $$\frac{\delta \theta_{w,slow}}{\delta t} + \mathbf{\nabla} \cdot q_{w,slow} - Q_{exchange} =0$$
 
 If the $h_{w,fast}$ > $h_{h,slow}$, then the $Q_{exchange}$ is negative, indicating that the water flows from the fast flow zone to slow flow zone.
+
+</details>
 
 ## Methods and Approach
 To implement the equations in the model, the following steps were taken. Firstly, both domains were defined to have the same top and boundary conditions and the same number of nodes; the soil column used for both is the same. The flow was assumed to enter through the fast flow zone only. The Richards Equation was modeled with two states with identical soil properties and a $Q_{exchange}$ of zero to see if the model produced identical results as unsaturated flow, as in this case, there is no exchange between the zones. The model solves both of the states of the two domains in parallel. The fast flow zone is controlled by $\beta$, with $\beta \theta_{sat}$ indicating the pore space in the fast flow zone. Then, the parameters were varied to have different soil parameters to study the behavior of the fast and slow flow zones. After that, the exchange term can be also changed to model the preferential flow. From the exchange term, $Q_{exchange}$, it is evident that the difference between the pressure heads of the fast and slow flow zones and therefore the $Q_{exchange}$ will dominate the flow process. To see the results of this stepwise expansion of the model, please see the Appendix. The model was then used to run different scenarios to see the effect of preferential flow through unsaturated soils; these scenarios contain different boundary conditions and model parameters to see how the model results change with under varying conditions. The scenarios will be further detailed in an upcoming section.
