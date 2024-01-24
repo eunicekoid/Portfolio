@@ -94,7 +94,7 @@ To implement the equations in the model, the following steps were taken. Firstly
 To model the unsaturated flow, discretization was used in a one-dimensional staggered grid scheme to capture the flow in a continuous way through small time steps and depth increments. The nodes represent the soil layers, and the internodes represent the space between soil layers as shown in Figure 1.
 
 <p align="center">
-  <img src="images/StaggeredGridDualPorosity.png">
+  <img src="images/StaggeredGridDualPorosity.png" style="transform: scale(0.8);">
 </p>
 <p align="center">
   <em>Figure 1: Staggered grid scheme for discretization and dual porosity conceptual model.</em>
@@ -111,7 +111,7 @@ The parameter values used in the model were the soil parameters from Gerke and V
 
 
 <p align="center">
-  <img src="./images/soilParGerke.png">
+  <img src="./images/soilParGerke.png" style="transform: scale(0.75);">
 </p>
 <p align="center">
   <em>Figure 2: Soil parameters for different soil fractions in dual porosity flow (Gerke and Van Genuchten, 1993).</em>
