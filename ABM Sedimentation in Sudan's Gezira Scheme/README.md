@@ -10,7 +10,7 @@ I developed an agent-based model incorporating landscape-driven effects, hydrolo
 
 [See the full report here](https://drive.google.com/file/d/1OiOlzZw2aZiWtdgFCl4wKmkiGQlJg3Gd/view?usp=drive_link) 
 
-<br>
+
 #### To view the model
 
 1. Download [Netlogo](https://ccl.northwestern.edu/netlogo/download.shtml)
