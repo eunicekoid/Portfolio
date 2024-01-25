@@ -1,6 +1,6 @@
 
 
-### Understanding Sedimentation Trajectories using agent-based modeling of Sudan's Gezira Scheme
+### Understanding Sedimentation Trajectories using agent-based modeling of Sudan's Gezira Irrigation Scheme
 
 
 
