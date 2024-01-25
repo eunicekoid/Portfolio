@@ -8,7 +8,7 @@ Meticulously designed in the 1920s, the Gezira Irrigation Scheme in Sudan was se
 <br><br>
 I developed an agent-based model incorporating landscape-driven effects, hydrological processes, and sediment deposition to simulate environmental conditions and maintenance strategies over the last century. From the model's results, I draw conclusions on the principle cause of sedimentation in the Gezira canals. 
 
-[See the full report here](https://drive.google.com/drive/u/0/my-drive) 
+[See the full report here](https://drive.google.com/file/d/1OiOlzZw2aZiWtdgFCl4wKmkiGQlJg3Gd/view?usp=drive_link) 
 
 #### To view the model
 
