@@ -53,6 +53,15 @@ Air quality and forest data
 Final dataframe
 - The aforementioned cleaned data along with the Indian shapefile, were saved as the final dataframe. The shape file was retrieved from Github user AnuragAnalog (2020) and contains the boundaries of India. 
 - The variables of interest are: Total number of hospitals, Total number of doctors, urban share, population density, slum population, total population, working population, mean pollution, forest data from 2000 until 2014, ec13_state_id, Covid-19 deaths and cases and average.
+
+The data has the following limitations:
+1. The India shapefile contains new states; for example, Ladakh became a state in 2019. Air quality data is not available for newly-created states. However, since air quality data overlaps with other known maps of India, the consequence of not having accurate mapping from state to air quality is insignificant. 
+2. The forest data is from 2000 to 2014 while Covid-19 outbreak data start from 2020. The forest condition might have changed between 2015 and 2019. 
+3. Demographic data comes from 2011. 
+4. The timeframe from which the mean population was taken is unknown. 
+5. Covid-19 cases and deaths change frequently, so the data will quickly become outdated.   
+
+
 </details>
 
 
@@ -97,3 +106,4 @@ Almost all states with high cases and deaths have a large number of total hospit
 <p align="center">
   <img src="images/map_all_variables.png?raw=true" style="transform: scale(0.5);">
 </p>
+
