@@ -143,3 +143,9 @@ The variables with a good fit with total deaths have positive R-squared values: 
 
 
 The data was spatially clustered using KMeans and three clusters. Mean population, slum population, forest coverage, work population, and total cases were examined based on three cateogries: low, medium, and high.
+
+| **Cluster** | **Total Cases** | **Slum Population** | **Work Population** | **Mean Pollution** | **Forest Coverage** |
+| ----------- | --------------- | ------------------- | ------------------- | ------------------ | ------------------- |
+| **0**       | Medium          | Medium              | Medium              | Medium             | Medium              |
+| **1**       | Low             | Low                 | Low                 | Low                | High                |
+| **2**       | High            | High                | High                | High               | Low                 |
