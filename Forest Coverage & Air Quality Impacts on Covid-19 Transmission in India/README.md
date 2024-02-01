@@ -59,7 +59,8 @@ The data has the following limitations:
 2. The forest data is from 2000 to 2014 while Covid-19 outbreak data start from 2020. The forest condition might have changed between 2015 and 2019. 
 3. Demographic data comes from 2011. 
 4. The timeframe from which the mean population was taken is unknown. 
-5. Covid-19 cases and deaths change frequently, so the data will quickly become outdated.   
+5. Covid-19 cases and deaths change frequently, so the data will quickly become outdated.  
+6. Two states were dropped in this analysis, Ladakh and Telangana, because demographic data was not available. 
 
 
 </details>
