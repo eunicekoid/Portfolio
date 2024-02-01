@@ -15,7 +15,9 @@ The data used in this analysis is from open source resources:
 - Socioeconomic High-resolution Rural-Urban Geographic Platform
 
 
-### Approach
+<details>
+<summary><b><u>Approach</b></u></summary>
+<br> 
 1. Conduct exploratory data analysis by each Indian state, examining the following three main variable groups: air quality, health and demographic, and Covid-19 cases. 
     - Air quality variables are total area of forest, the forest cover value, and mean pollution. 
     - Health and demographic variables are slum, work and total population, urban share, population density and number of doctors and hospitals. 
@@ -23,7 +25,14 @@ The data used in this analysis is from open source resources:
 
 2. Apply spatial visualization, regression, and clustering algorithms to identify patterns and relationships between variables. 
 
-### Data Collection and Interrogation
+</details>
+
+
+
+
+<details>
+<summary><b><u>Data Collection and Interrogation</b></u></summary>
+<br> 
 
 Covid-19 data
 - Data from January 30 to April 26, 2020 from the Data Development Lab India (DLL India). Files used: covid_cases_deaths_district.csv, covid_deaths_recoveries.csv, and covid_infected_deaths.csv 
@@ -43,6 +52,12 @@ Air quality and forest data
 Final dataframe
 - The aforementioned cleaned data along with the Indian shapefile, were saved as the final dataframe. The shape file was retrieved from Github user AnuragAnalog (2020) and contains the boundaries of India. 
 - The variables of interest are: Total number of hospitals, Total number of doctors, urban share, population density, slum population, total population, working population, mean pollution, forest data from 2000 until 2014, ec13_state_id, Covid-19 deaths and cases and average.
+</details>
+
+
+### Data Collection and Interrogation
+
+
 
 
 ### Literature Review 
