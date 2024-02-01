@@ -56,12 +56,11 @@ Final dataframe
 </details>
 
 
-### Data Collection and Interrogation
+<details>
+<summary><b><u>Literature Review</b></u></summary>
+<br> 
 
-
-
-
-### Literature Review 
+ 
 | Author                | Year | Description in Literature                                                                                                                                                                         | Brief Summary                                                                                                                                                        |
 | --------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Chameides et al.      | 1988 | Trees improve air quality by directly removing air pollutants, altering local microclimates and building energy use, and eliminating volatile organic compounds (VOCs).                           | Without trees, these mechanisms can contribute to O3 and PM2.5 formation.                                                                                            |
@@ -85,4 +84,7 @@ Final dataframe
 - Sahoo, P. K., Mangla, S., Pathak, A. K., Salãmao, G. N., & Sarkar, D. (2020). Pre-to-post lockdown impact on air quality and the role of environmental factors in spreading the COVID-19 cases-a study from a worst-hit state of India. <em>International journal of biometeorology</em>, 1-18
 
 
+
+
+</details>
 
