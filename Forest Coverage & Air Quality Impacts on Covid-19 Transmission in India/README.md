@@ -117,3 +117,18 @@ Based on the linear regression, an increase in all variables except forest cover
 <p align="center">
   <img src="images/all_regression.png?raw=true" style="transform: scale(1);">
 </p>
+
+The MSE and R-squared values are summarized for each variable below.
+
+| **Variable** | **Mean Squared Error (MSE)** | **Coefficient of determination (R<sup>2</sup>)** |
+| --------------------- | ---------------------------- | ------------------------------------------------ |
+| Urban Share           | 0.10                         | \-0.13                                           |
+| Total Population      | 4.68 x 10<sup>15</sup>       | 0.55                                             |
+| Slum Population       | 5.66 x 10<sup>12</sup>       | 0.58                                             |
+| Work Population       | 9.07 x 10<sup>14</sup>       | 0.60                                             |
+| Total Doctors         | 4.06 x 10<sup>5</sup>        | 0.44                                             |
+| Total Hospitals       | 9.95 x 10<sup>4</sup>        | \-3.17                                           |
+| Mean Pollution        | 6.83 x 10<sup>5</sup>        | 0.02                                             |
+| Average Forest        | 3.09 x 10<sup>9</sup>        | \-0.30                                           |
+| Forest Coverage (%)   | 71.17                        | 0.26                                             |
+| Total Forest (area)   | 8.47 x 10<sup>7</sup>        | \-1.13                                           |
