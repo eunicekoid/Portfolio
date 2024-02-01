@@ -23,7 +23,7 @@ The data used in this analysis is from open source resources:
 
 2. Apply spatial visualization, regression, and clustering algorithms to identify patterns and relationships between variables. 
 
-#### Data Collection and Interrogation
+### Data Collection and Interrogation
 
 Covid-19 data
 - Data from January 30 to April 26, 2020 from the Data Development Lab India (DLL India). Files used: covid_cases_deaths_district.csv, covid_deaths_recoveries.csv, and covid_infected_deaths.csv 
@@ -45,10 +45,7 @@ Final dataframe
 - The variables of interest are: Total number of hospitals, Total number of doctors, urban share, population density, slum population, total population, working population, mean pollution, forest data from 2000 until 2014, ec13_state_id, Covid-19 deaths and cases and average.
 
 
-<details>
-<summary><b>Literature Review</b></summary>
-<br>  
-
+### Literature Review 
 | Author                | Year | Description in Literature                                                                                                                                                                         | Brief Summary                                                                                                                                                        |
 | --------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Chameides et al.      | 1988 | Trees improve air quality by directly removing air pollutants, altering local microclimates and building energy use, and eliminating volatile organic compounds (VOCs).                           | Without trees, these mechanisms can contribute to O3 and PM2.5 formation.                                                                                            |
@@ -73,5 +70,3 @@ Final dataframe
 
 
 
-
-</details>
