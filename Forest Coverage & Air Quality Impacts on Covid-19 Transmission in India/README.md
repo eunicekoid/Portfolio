@@ -149,3 +149,17 @@ The data was spatially clustered using KMeans and three clusters. Mean populatio
 | **0**       | Medium          | Medium              | Medium              | Medium             | Medium              |
 | **1**       | Low             | Low                 | Low                 | Low                | High                |
 | **2**       | High            | High                | High                | High               | Low                 |
+
+Clustering was conducted to see if increasing forest coverage will help decrease Covid-19 cases and deaths. In addition, the analysis investigates if a decrease in pollution (e.g., by asking people to work from home, reducing energy consumption to improve air quality) would reduce Covid-19 cases and deaths. The mean of the clustering results are as follows: 
+
+| **Cluster**             | **0**      | **1**     | **2**      |
+| ----------------------- | ---------- | --------- | ---------- |
+| **Total Cases**         | 26,698     | 716       | 51,016     |
+| **Mean Pollution**      | 1,123      | 422       | 4,311      |
+| **Slum Population**     | 5,688,993  | 202,048   | 9,044,194  |
+| **Forest Coverage (%)** | 17         | 35        | 16         |
+| **Work Population**     | 33,884,680 | 3,872,275 | 57,621,300 |
+
+<p align="center">
+  <img src="images/map_cluster.png?raw=true" style="transform: scale(.5);">
+</p>
