@@ -1,4 +1,4 @@
-## Analyzing and Forecasting Covid-19 Transmission in India Using Machine Learning
+## Analyzing and Forecasting Forest Coverage Impacts on Air Quality and Covid-19 Transmission in India Using Machine Learning
 
 (Completed November 2020)
 
