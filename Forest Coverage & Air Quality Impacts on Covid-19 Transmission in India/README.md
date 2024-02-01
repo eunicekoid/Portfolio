@@ -90,3 +90,10 @@ Final dataframe
 
 ## Analysis
 
+### Spatial Visualization
+
+Almost all states with high cases and deaths have a large number of total hospitals, doctors, work population, total population, slum population, and mean pollution. These states also have a low amount of forest coverage, total forest, and surprisingly, population density. 
+
+<p align="center">
+  <img src="images/map_all_variables.png?raw=true" style="transform: scale(0.5);">
+</p>
