@@ -132,3 +132,14 @@ The MSE and R-squared values are summarized for each variable below.
 | Average Forest        | 3.09 x 10<sup>9</sup>        | \-0.30                                           |
 | Forest Coverage (%)   | 71.17                        | 0.26                                             |
 | Total Forest (area)   | 8.47 x 10<sup>7</sup>        | \-1.13                                           |
+
+
+Variables with small MSE values are not widely dispersed around the mean. There is a wide range of values for almost all of the variables except urban share, which makes sense given the high population and land area of India. 
+
+The variables with a good fit with total deaths have positive R-squared values: total population, slum population, work population, total doctors, mean pollution, and forest coverage. 
+
+### Clustering 
+
+
+
+The data was spatially clustered using KMeans and three clusters. Mean population, slum population, forest coverage, work population, and total cases were examined based on three cateogries: low, medium, and high.
