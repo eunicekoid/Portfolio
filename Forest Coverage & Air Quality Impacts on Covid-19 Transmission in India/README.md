@@ -161,7 +161,7 @@ Clustering was conducted to see if increasing forest coverage will help decrease
 | **Work Population**     | 33,884,680 | 3,872,275 | 57,621,300 |
 
 <p align="center">
-  <img src="images/map_cluster.png?raw=true" style="transform: scale(.3);">
+  <img src="images/map_cluster.png?raw=true" style="transform: scale(.5);">
 </p>
 
 There are 9 states in cluster 0 that have a medium number of total cases. In cluster 1, there are 17 states with a low number of cases. In cluster 2, there are 2 states with the highest number of cases.
