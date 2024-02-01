@@ -111,7 +111,8 @@ Almost all states with high cases and deaths have a large number of total hospit
 
 ### Regression 
 
-Based on the linear regression, Covid-19 cases will increase as the value of all variables increase, except the forest coverage value. 
+Based on the linear regression, an increase in all variables except forest coverage value will also increase Covid-19 cases.
+
 
 <p align="center">
   <img src="images/All_Regression.JPG?raw=true" style="transform: scale(0.5);">
