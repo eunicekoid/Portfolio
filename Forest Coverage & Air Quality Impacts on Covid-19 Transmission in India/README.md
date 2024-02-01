@@ -115,5 +115,5 @@ Based on the linear regression, an increase in all variables except forest cover
 
 
 <p align="center">
-  <img src="images/All_Regression.JPG?raw=true" style="transform: scale(0.5);">
+  <img src="images/all_regression.jpg?raw=true" style="transform: scale(0.5);">
 </p>
