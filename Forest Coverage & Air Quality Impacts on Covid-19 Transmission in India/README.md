@@ -166,14 +166,16 @@ Clustering was conducted to see if increasing forest coverage will help decrease
 
 There are 9 states in cluster 0 that have a medium number of total cases. In cluster 1, there are 17 states with a low number of cases. In cluster 2, there are 2 states with the highest number of cases.
 
+
+**Observations**
+1. States with higher forest coverage generally have lower Covid-19 cases. 
+    - There are a few outliers and exceptions to this pattern. The state with the most cases, Maharashtra, has a relatively low forest coverage percentage. The high cases could be due to the fact that there is a large population in Maharashtra. 
+2. Higher forest coverage have relatively less mean pollution. 
+    - On a larger scale, this pattern is consistent. This supports the point that forests and pollution are negatively correlated. 
+3. Generally, there is a small positive correlation between pollution and total cases.
+    - The mean squared error for this relationship is positive, so there is a slight correlation, though not as strong as hypothesized. Forest coverage is a better predictor of total cases. More research into the contributors to pollution would help identify the specific causes of pollution and how they might affect Covid-19 cases.
+
+
 ## Conclusion 
 
-1. States with higher forest coverage generally have lower Covid-19 cases. 
-  - There are a few outliers and exceptions to this pattern. The state with the most cases, Maharashtra, has a relatively low forest coverage percentage. The high cases could be due to the fact that there is a large population in Maharashtra. 
-2. Higher forest coverage have relatively less mean pollution. 
-  - On a larger scale, this pattern is consistent. This supports the point that forests and pollution are negatively correlated. 
-3. Generally, there is a small positive correlation between pollution and total cases.
-  - The mean squared error for this relationship is positive, so there is a slight correlation, though not as strong as hypothesized. Forest coverage is a better predictor of total cases. More research into the contributors to pollution would help identify the specific causes of pollution and how they might affect Covid-19 cases.
-
-
-In summary, 
+In summary, states with lower forest coverage typically have higher pollution. Higher polluted states tend to have higher populations. Polluted and populated states have a higher number of Covid-19 cases. These findings suggest that environmental factors like forest density and air quality impact the transmission of Covid-19. Policies that improve air quality such as decreased fuel consumption and limits on deforestation could be enacted as pandemic prevention policies. 
