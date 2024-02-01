@@ -18,6 +18,7 @@ The data used in this analysis is from open source resources:
 <details>
 <summary><b><u>Approach</b></u></summary>
 <br> 
+
 1. Conduct exploratory data analysis by each Indian state, examining the following three main variable groups: air quality, health and demographic, and Covid-19 cases. 
     - Air quality variables are total area of forest, the forest cover value, and mean pollution. 
     - Health and demographic variables are slum, work and total population, urban share, population density and number of doctors and hospitals. 
