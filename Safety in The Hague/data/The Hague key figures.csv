@@ -1,0 +1,116 @@
+"Buurten","% unemployed job-seekers, total","Number of establishments, education","Average disposable income of private households","All offences","Average number of private cars per address (excluding lease cars)","Number of establishments of businesses and institutions"
+"01 Oud Scheveningen",10.1,24,33800,136,0.60,389
+"02 Vissershaven",12.0,35,40200,392,0.62,670
+"03 Scheveningen Badplaats",6.7,57,43700,421,0.58,833
+"04 Visserijbuurt",8.4,31,40500,197,0.54,475
+"05 v Stolkpark/Schev Bosjes",1.5,7,103400,76,0.78,118
+"06 Waldeck-Zuid",11.9,2,32000,71,0.59,92
+"07 Statenkwartier",4.3,71,70900,379,0.69,1391
+"08 Geuzenkwartier",6.6,32,39800,166,0.69,400
+"09 Vogelwijk",2.5,48,80600,247,1.11,595
+"10 Rond de Energiecentrale",17.6,34,31500,381,0.47,824
+"11 Kortenbos",11.0,57,34500,946,0.39,1273
+"12 Voorhout",6.1,36,50000,871,0.39,1277
+"13 Uilebomen",11.7,27,38800,888,0.36,476
+"14 Zuidwal",13.1,74,30000,2376,0.29,1410
+"15 Schildersbuurt-West",20.8,43,28400,1009,0.58,1211
+"16 Schildersbuurt-Noord",22.9,27,27300,730,0.49,729
+"17 Schildersbuurt-Oost",20.4,14,29300,507,0.58,444
+"18 Huygenspark",14.1,31,28000,957,0.26,651
+"19 Laakhaven-Oost",12.8,12,29400,462,0.30,305
+"20 Moerwijk-Oost",23.5,10,24200,303,0.51,274
+"21 Groente- en Fruitmarkt",13.1,19,33300,412,0.80,818
+"22 Laakhaven-West",20.1,25,27200,643,0.44,719
+"23 Spoorwijk",16.5,11,33500,212,0.80,279
+"24 Laakkwartier-West",14.3,27,31200,548,0.69,1001
+"25 Laakkwartier-Oost",12.6,31,30200,593,0.63,1410
+"26 Noordpolderbuurt",17.3,32,27800,608,0.57,847
+"30 Rustenburg",12.8,23,32300,299,0.66,646
+"31 Oostbroek-Noord",11.5,20,32500,299,0.64,587
+"32 Transvaalkwartier-Noord",24.2,10,26200,225,0.45,374
+"33 Transvaalkwartier-Midden",14.4,11,29800,403,0.61,583
+"34 Transvaalkwartier-Zuid",16.2,19,30600,720,0.70,1006
+"35 Oostbroek-Zuid",14.2,32,31800,415,0.65,1144
+"36 Zuiderpark",1.8,4,21800,217,"x",32
+"37 Moerwijk-West",27.0,12,23800,423,0.46,414
+"38 Moerwijk-Noord",17.6,21,28800,511,0.61,658
+"39 Moerwijk-Zuid",23.9,26,27000,235,0.57,325
+"40 Nieuw Waldeck",12.3,19,32700,273,0.71,422
+"41 Zorgvliet",4.0,8,77700,80,0.75,181
+"42 Stadhoudersplantsoen",4.1,19,43700,85,0.53,307
+"43 Sweelinckplein eo",4.6,77,53200,214,0.57,871
+"44 Koningsplein eo",8.8,76,38700,395,0.49,1114
+"45 Zeeheldenkwartier",9.9,103,38600,734,0.46,1878
+"46 Archipelbuurt",4.8,70,74800,275,0.61,986
+"47 Willemspark",6.0,23,53200,134,0.45,541
+"48 Nassaubuurt",2.8,20,97100,104,0.77,438
+"49 Haagse Bos",4.4,3,43200,147,0.41,92
+"50 Bloemenbuurt-West",4.2,20,49800,60,0.84,215
+"51 Bloemenbuurt-Oost",5.5,50,42000,272,0.69,612
+"52 Bomenbuurt",6.3,40,41600,277,0.62,794
+"53 Vruchtenbuurt",5.9,58,48400,231,0.79,699
+"54 Heesterbuurt",11.9,41,32900,303,0.55,689
+"55 Valkenboskwartier",11.1,116,34600,649,0.54,1627
+"60 Binckhorst",22.7,30,19400,401,0.77,762
+"61 Landen",18.5,13,31000,223,0.56,308
+"62 Rivierenbuurt-Zuid",16.2,10,24300,81,0.29,143
+"63 Rivierenbuurt-Noord",13.8,26,36800,815,0.43,566
+"64 Bezuidenhout-West",13.2,23,34100,329,0.33,441
+"65 Bezuidenhout-Midden",4.5,55,52500,465,0.54,858
+"66 Bezuidenhout-Oost",6.6,79,41100,383,0.55,1016
+"67 Kampen",16.1,22,29200,98,0.54,170
+"68 Marlot",1.7,6,98700,38,1.11,106
+"69 Burgen en Horsten",11.4,31,32600,311,0.57,465
+"70 Oostduinen","-",0,"",43,"x",10
+"71 Belgisch Park",5.1,65,53000,422,0.72,977
+"72 Rijslag",6.4,16,46500,69,0.58,193
+"73 Westbroekpark",1.9,3,81500,103,0.88,108
+"74 Duttendel",3.2,6,128800,74,0.98,150
+"75 Uilennest",3.7,9,51900,54,0.74,239
+"76 Duinzigt",2.9,16,61100,122,0.77,214
+"77 Waalsdorp",2.4,32,86900,134,0.87,448
+"78 Arendsdorp",3.4,13,83700,75,0.74,169
+"79 v Hoytemastraat eo",2.7,23,66800,101,0.77,309
+"80 Morgenstond-Zuid",19.5,15,26800,608,0.55,576
+"81 Bosjes van Pex",5.2,4,56300,61,0.84,55
+"82 Rosenburg",11.8,16,32900,310,0.57,257
+"83 Eykenduynen",5.2,13,42400,138,0.72,244
+"84 Leyenburg",8.3,60,35000,804,0.69,1200
+"85 Kerketuinen/Zichtenburg",27.3,7,"",227,"x",379
+"86 Houtwijk",7.7,66,40800,646,0.86,932
+"87 Venen/Oorden/Raden",18.6,26,28800,585,0.63,666
+"88 Morgenstond-West",11.8,28,34400,521,0.74,642
+"89 Morgenstond-Oost",20.9,24,26000,535,0.52,488
+"90 Ockenburgh",3.3,5,88400,251,1.40,100
+"91 Kijkduin",4.6,10,62700,76,0.99,154
+"92 Bohemen/Meer en Bos",6.0,30,39200,130,0.70,372
+"93 Componistenbuurt",3.8,9,43200,50,0.76,128
+"94 Waldeck-Noord",6.1,9,34000,129,0.64,167
+"95 Kom Loosduinen",9.8,15,32000,233,0.63,362
+"96 Zijden/Steden/Zichten",17.8,24,29400,538,0.63,615
+"97 Kraayenstein & Vroondaal",6.4,30,48800,326,0.97,487
+"98 Dreven en Gaarden",17.5,40,30300,538,0.67,747
+"99 De Uithof",8.3,3,34100,98,0.79,103
+"100 Duindorp",11.0,24,34700,321,0.66,354
+"101 Erasmus Veld",5.4,6,48000,92,0.93,174
+"102 Hoge Veld",7.4,47,49400,270,1.06,739
+"103 Parkbuurt Oosteinde",3.4,17,67600,79,1.27,267
+"104 Lage Veld",8.1,13,46300,123,1.06,309
+"105 Zonne Veld",6.2,14,52300,121,1.22,276
+"106 Vlietzoom-West",6.2,4,"",52,"x",232
+"107 Vliegeniersbuurt","-",3,"",176,"",179
+"108 Bosweide",2.9,7,100500,65,1.39,163
+"109 Tedingerbroek","-",0,"",1,"",1
+"110 De Reef","-",0,"",40,"x",12
+"111 De Venen",7.3,13,41700,123,0.84,200
+"112 Morgenweide",6.9,38,48500,313,1.03,576
+"113 Singels",7.1,23,50400,160,1.07,385
+"114 Waterbuurt",7.0,21,46200,160,1.09,389
+"115 De Bras",6.6,29,60200,138,1.21,456
+"116 Vlietzoom-Oost",6.0,2,"",45,"x",50
+"117 De Rivieren",3.8,4,"",177,"x",386
+"118 De Lanen",5.2,33,56000,188,1.16,349
+"119 De Velden",5.8,23,54800,169,1.15,290
+"120 De Vissen",5.4,49,54800,56,1.19,567
+"121 Rietbuurt",6.2,9,56100,84,1.14,174
+"Unknown",0.0,0,-4760,"","",0
