@@ -13,7 +13,7 @@
 - *Richer* is defined as neighborhoods with low unemployment, a high number of educational establishments, high average disposable income, a high number of private cars, and a high number of businesses/institutions 
 - *Safe* means a low number of offenses. 
 
-Key variables:
+Key features:
 1. Percent unemployed job seekers
 2. Number of educational establishments
 3. Average disposable income by household
