@@ -17,8 +17,9 @@ Key variables:
 1. Percent unemployed job seekers
 2. Number of educational establishments
 3. Average disposable income by household
-4. Number of offences
-5. Average number of private cars per address
-6. Number of businesses and institutions
+4. Average number of private cars per address
+5. Number of businesses and institutions
+
+Target: Number of offences as a proxy for safety 
 
 
