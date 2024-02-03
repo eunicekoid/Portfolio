@@ -23,3 +23,4 @@ Key features:
 Target: Number of offences as a proxy for safety 
 
 
+<img src="images/thumbnail_hague.png?raw=true" style="transform: scale(0.9);"/>
