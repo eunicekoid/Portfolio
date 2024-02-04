@@ -1,6 +1,6 @@
 ## Simulating Infrastructure Vulnerabilities in Banglesh to Improve the Resilience of the Transportation Network
 
-Infrastructure bottlenecks are one of the top inhibitors of economic growth in Bangladesh ([PSF, 2020](* https://www.privacyshield.gov/article?id=Bangladesh-Architectural-Construction-and-Engineering-Services)). The South Asian country regularly faces natural disasters like earthquakes, river flooding, and cyclones, placing excessive stress on its infrastructure. Enormous investment is required to bring the railways, roads, and waterways up to the standard needed to facilitate the growing population of Bangladesh.
+Infrastructure bottlenecks are one of the top inhibitors of economic growth in Bangladesh ([PSF, 2020](https://www.privacyshield.gov/article?id=Bangladesh-Architectural-Construction-and-Engineering-Services). The South Asian country regularly faces natural disasters like earthquakes, river flooding, and cyclones, placing excessive stress on its infrastructure. Enormous investment is required to bring the railways, roads, and waterways up to the standard needed to facilitate the growing population of Bangladesh.
 
 **Research Questions:**
 
