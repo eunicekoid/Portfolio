@@ -20,7 +20,7 @@ Key features:
 4. Average number of private cars per address
 5. Number of businesses and institutions
 
-Target: Number of offences as a proxy for safety 
+Target: Number of offenses as a proxy for safety 
 
 
 <img src="images/thumbnail_hague.png?raw=true" style="transform: scale(0.9);"/>
