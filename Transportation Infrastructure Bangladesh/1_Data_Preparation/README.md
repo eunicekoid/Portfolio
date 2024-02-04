@@ -3,7 +3,7 @@
 Raw data from [Bangladesh&#39;s Roads and Highways Department](https://www.rhd.gov.bd/RHDAtGlance/index.asp) - RMMS and BMMS database. 
 
 
-
+### 1_Data_Cleaning.ipynb
 <details>
 <summary><b><u>Cleaning of Roads Data</b></u></summary>
 <br>  
@@ -25,7 +25,7 @@ Finally, typos were examined and edited if necessary. This was done by ensuring 
 </details>
 
 <br>
-The cleaned data was converted from Excel files to .tcv files using Python. Then, the Excel files were uploaded to and viewed in the Java file. The results are below:
+The cleaned data was converted from Excel files to .tcv files using Python. Then, the Excel files were uploaded to and viewed from the Java file. The results are below:
 <br>
 <br>
 
@@ -36,3 +36,7 @@ The cleaned data was converted from Excel files to .tcv files using Python. Then
 <p align="center">
   <em>Map of Bangladesh with cleaned roads and bridges data.</em>
 </p>
+
+
+### 2_Combine_Roads_and_Bridges.ipynb
+Then, the roads and bridges data were combined to prepare the data for a simulation using NetworkX, an agent-based modeling package in Python. 
