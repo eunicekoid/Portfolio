@@ -1,6 +1,6 @@
 ## Data Preparation
 
-Raw data from [Bangladesh&#39;s Roads and Highways Department](https://www.rhd.gov.bd/RHDAtGlance/index.asp). 
+Raw data from [Bangladesh&#39;s Roads and Highways Department](https://www.rhd.gov.bd/RHDAtGlance/index.asp) - RMMS and BMMS database. 
 
 
 
