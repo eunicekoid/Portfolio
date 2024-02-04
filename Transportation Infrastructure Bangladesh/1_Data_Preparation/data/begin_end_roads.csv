@@ -1,0 +1,17 @@
+,road,chainage,lrp,lat,lon,gap,type,name
+0,N1,0.0,LRPS,23.7060278,90.443333,,Others,Start of Road  after Jatrabari Flyover infront of filling station.
+1338,N1,462.254,LRPE,20.8629167,92.29808299999999,,Others,"End of Road at Shapla Chattar ,Teknaf Meet with Z1098 &Z1099."
+1356,N102,0.0,LRPS,23.4789716,91.1181938,,Others,Start of road from N1 Mainamati
+1574,N102,82.682,LRPE,24.0506111,91.1146667,,Others,Meet with N 2 at Sanail
+1710,N105,0.0,LRPS,23.6904163,90.5466108,,Others,"Starts of road from N1,Dhaka teknaf road at Madanpur."
+1826,N105,48.87,LRP048,23.989527399999997,90.3582222,,KmPost / Others,"B.Bridge 83 km,Tangail 60 km / End of Road  Intersection at N4 at Joydebpur."
+1827,N106,0.0,LRPS,22.393555199999998,91.82158270000001,,Others,Start of Road  from Oxygen  More
+2038,N106,66.85,LRPE,22.6485274,92.2018333,,Others,The road ends Infront of DC Bunglow
+3231,N2,286.51599999999996,LRPE,25.1570556,92.0176382,,Others,Road End at Jaflong.
+2346,N2,0.0,LRPS,23.7059167,90.5214438,,Others,Road Start from N1 at Katchpur
+3237,N204,0.0,LRPS,24.1479163,91.34661080000001,,Others,Road start from N2 at Jagannathganj.
+3329,N204,34.421,LRPE,24.2673882,91.4771382,,Others,Road End intersecting N2 at Shaistagonj Round About.
+3346,N207,0.0,LRPS,24.294860800000002,91.51025,,Others,Road start from N2 at Mirpur.
+3511,N207,67.985,LRPE,24.6263327,91.67752709999999,,Others,Road end with N2 at Mukti joddha Chattor Sherpur.
+3512,N208,0.0,LRPS,24.4713604,91.7655556,,Others,Road Start from N207 infront of RHD
+3688,N208,57.495,LRPE,24.8775549,91.8753604,,Others,"Road end at Humayun Rashid Chattar, Intersection od N2 and N208"
