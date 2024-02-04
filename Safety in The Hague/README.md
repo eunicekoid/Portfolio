@@ -1,7 +1,7 @@
 
 ## Predicting Crime Rates in The Hague, Netherlands With Machine Learning 
 
-**Problem Statement**: Pinpointing the exact causes of crime in a city is challenging as contributing factors are highly nuanced and complex. For example, some hypothesize that crime increases as the income inequality increases. Which variables are the best predictors of crime in The Hague?
+**Problem Statement**: Pinpointing the exact causes of crime in a city is challenging as contributing factors are highly nuanced and complex. For example, some might hypothesize that crime increases as the income inequality increases. Which variables are the best predictors of crime in The Hague?
 
 **Project Goal**: Inspect variables of interest that may be correlated with crime levels in The Hague, Netherlands and make statistical predictions on crime rates using machine learning.
 
