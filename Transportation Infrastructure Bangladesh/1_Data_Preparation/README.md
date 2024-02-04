@@ -27,7 +27,8 @@ Finally, typos were examined and edited if necessary. This was done by ensuring 
 <br>
 <br>
 The cleaned data was converted from Excel files to .tcv files using Python. Then, the Excel files were uploaded to and viewed in the Java file. The results are below:
-
+<br>
+<br>
 
 
 <p align="center">
