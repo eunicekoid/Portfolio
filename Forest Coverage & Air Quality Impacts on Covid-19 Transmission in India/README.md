@@ -1,4 +1,4 @@
-## Analyzing and Forecasting Forest Coverage Impacts on Air Quality and Covid-19 Transmission in India Using Machine Learning
+<!-- ## Analyzing and Forecasting Forest Coverage Impacts on Air Quality and Covid-19 Transmission in India Using Machine Learning
 
 (Completed November 2020)
 
@@ -178,4 +178,4 @@ There are 9 states in cluster 0 that have a medium number of total cases. In clu
 
 ## Conclusion 
 
-In summary, states with lower forest coverage typically have higher pollution. Higher polluted states tend to have higher populations. Polluted and populated states have a higher number of Covid-19 cases. These findings suggest that environmental factors like forest density and air quality impact the transmission of Covid-19. Policies that improve air quality such as decreased fuel consumption and limits on deforestation could be enacted as pandemic prevention policies. 
+In summary, states with lower forest coverage typically have higher pollution. Higher polluted states tend to have higher populations. Polluted and populated states have a higher number of Covid-19 cases. These findings suggest that environmental factors like forest density and air quality impact the transmission of Covid-19. Policies that improve air quality such as decreased fuel consumption and limits on deforestation could be enacted as pandemic prevention policies.  -->
