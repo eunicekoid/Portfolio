@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.13-slim # For AWS, use FROM --platform=linux/amd64 python:3.13-slim
 
 WORKDIR /app
 
@@ -14,8 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chmod +x setup.sh
+RUN sed -i 's/\r$//' setup.sh && \
+    chmod +x setup.sh
 
 EXPOSE 8000
 
-CMD ["./setup.sh"] 
+CMD ["./setup.sh"] # For AWS, run CMD ["/bin/bash", "./setup.sh"] 
