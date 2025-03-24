@@ -15,9 +15,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 WOLFRAM_APP_ID = os.getenv("WOLFRAM_APP_ID")
 
-# SITE_ID = 1
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'db', 'backend_container', 'frontend_container', 'postgres_container', '0.0.0.0']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', 'db', 'backend_container', 'frontend_container', 'postgres_container', '0.0.0.0']
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -161,6 +159,17 @@ DATABASES = {
         "PORT": int(os.getenv("DB_PORT", 5432)),  
     }
 }
+
+# For AWS
+# DATABASES = {
+#     "default": {
+#         "NAME": os.environ.get("POSTGRES_DB", "postgres"),
+#          "USER": os.environ.get("POSTGRES_USER", "postgres"),
+#          "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+#          "HOST": os.environ.get("POSTGRES_HOST"),
+#          "PORT": int(os.environ.get("DB_PORT", "5432")),
+#     }
+# }
 
 
 # Password validation
