@@ -14,7 +14,11 @@ export default defineConfig({
     port: 5173,
     watch: {
       usePolling: true
-    }
+    },
+    // Add host for AWS
+    // allowedHosts: [
+    //   'xxxxx.us-east-1.elb.amazonaws.com'
+    // ]
   },
   resolve: {
     alias: {
