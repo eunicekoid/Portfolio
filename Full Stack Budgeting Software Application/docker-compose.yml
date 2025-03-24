@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_container
+    env_file:
+      - .env  
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports: 
+      - "${DB_PORT}:${DB_PORT}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    image: python:3.13
+    container_name: backend_container
+    command: ["./setup.sh"]
+    env_file:
+      - .env  
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_HOST=${DB_HOST}
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - DJANGO_SETTINGS_MODULE=euniceproj.settings
+
+  frontend:
+    build: ./frontend
+    container_name: frontend_container
+    ports:
+      - "${FRONTEND_PORT}:5173"  
+    working_dir: /app
+    command: ["npm", "run", "dev"]  
+    environment:
+      - CHOKIDAR_USEPOLLING=true 
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
