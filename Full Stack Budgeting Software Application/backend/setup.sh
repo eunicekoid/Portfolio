@@ -50,3 +50,56 @@ python setup_data.py
 
 python manage.py runserver 0.0.0.0:8000
 
+##################################################################################################
+### For AWS ######################################################################################
+##################################################################################################
+# #!/bin/bash
+
+# # Enable command printing and exit on error
+# set -ex
+
+# echo "Starting setup script..."
+# echo "Environment variables check:"
+# echo "POSTGRES_HOST: ${POSTGRES_HOST}"
+# echo "POSTGRES_USER: ${POSTGRES_USER}"
+# echo "POSTGRES_DB: ${POSTGRES_DB}"
+# echo "DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE}"
+
+# echo "Installing requirements..."
+# pip install -r requirements.txt
+# pip install djangorestframework-simplejwt
+
+# echo "Installing PostgreSQL client..."
+# apt-get update && apt-get install -y postgresql-client
+
+# echo "Checking PostgreSQL connection..."
+# export PGPASSWORD=${POSTGRES_PASSWORD}
+# max_retries=30
+# retry_count=0
+
+# until pg_isready -h ${POSTGRES_HOST} -U ${POSTGRES_USER} -d ${POSTGRES_DB}; do
+#     retry_count=$((retry_count+1))
+#     if [ $retry_count -eq $max_retries ]; then
+#         echo "Failed to connect to PostgreSQL after $max_retries attempts"
+#         exit 1
+#     fi
+#     echo "PostgreSQL is unavailable - sleeping (attempt $retry_count/$max_retries)"
+#     sleep 5
+# done
+
+# echo "PostgreSQL connection successful!"
+
+# echo "Running migrations..."
+# python manage.py makemigrations
+# python manage.py migrate
+
+# echo "Setting up initial data..."
+# if [ -f setup_data.py ]; then
+#     python setup_data.py
+# else
+#     echo "setup_data.py not found, skipping initial data setup"
+# fi
+
+# echo "Starting Django server..."
+# exec python manage.py runserver 0.0.0.0:8000
+
